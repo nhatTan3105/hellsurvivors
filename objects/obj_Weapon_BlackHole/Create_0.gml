@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_user(0);
+black_hole_time = 40;
+alarm[0] = black_hole_time;
 
-alarm[0] = alarm_slash;
+
+
