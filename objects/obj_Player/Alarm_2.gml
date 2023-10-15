@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Weapon BlackHole
 // You can write your code in this editor
 
 event_user(2);

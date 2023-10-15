@@ -36,6 +36,7 @@
   "resources": [
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
     {"id":{"name":"s_player_idle","path":"sprites/s_player_idle/s_player_idle.yy",},},
+    {"id":{"name":"obj_Weapon_FireBall","path":"objects/obj_Weapon_FireBall/obj_Weapon_FireBall.yy",},},
     {"id":{"name":"obj_Weapon_Slash","path":"objects/obj_Weapon_Slash/obj_Weapon_Slash.yy",},},
     {"id":{"name":"s_weapon_slash","path":"sprites/s_weapon_slash/s_weapon_slash.yy",},},
     {"id":{"name":"s_enemy_skeleton","path":"sprites/s_enemy_skeleton/s_enemy_skeleton.yy",},},
@@ -45,6 +46,7 @@
     {"id":{"name":"s_weapon_blackhole","path":"sprites/s_weapon_blackhole/s_weapon_blackhole.yy",},},
     {"id":{"name":"s_enemy_mushroom","path":"sprites/s_enemy_mushroom/s_enemy_mushroom.yy",},},
     {"id":{"name":"obj_Enemy_Skeleton","path":"objects/obj_Enemy_Skeleton/obj_Enemy_Skeleton.yy",},},
+    {"id":{"name":"s_waepon_fireball","path":"sprites/s_waepon_fireball/s_waepon_fireball.yy",},},
     {"id":{"name":"obj_Enemey_Mushroom","path":"objects/obj_Enemey_Mushroom/obj_Enemey_Mushroom.yy",},},
     {"id":{"name":"obj_Enemy_Parents","path":"objects/obj_Enemy_Parents/obj_Enemy_Parents.yy",},},
     {"id":{"name":"obj_Weapon_Parents","path":"objects/obj_Weapon_Parents/obj_Weapon_Parents.yy",},},

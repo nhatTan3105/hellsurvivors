@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Weapon Shield
 // You can write your code in this editor
 
 event_user(1);

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Weapon Slash
 // You can write your code in this editor
 
 var slash = instance_create_layer(x, y, "Instances_1", obj_Weapon_Slash);

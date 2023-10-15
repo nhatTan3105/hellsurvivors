@@ -3,3 +3,8 @@
 
 addX = 0;
 
+event_inherited()
+
+dmg = obj_Player.dmg_slash;
+
+

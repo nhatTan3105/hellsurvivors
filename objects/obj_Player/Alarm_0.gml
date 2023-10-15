@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Weapon Slash
 // You can write your code in this editor
 
 event_user(0);
