@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "obj_weapon",
+    "path": "folders/Objects/obj_weapon.yy",
   },
   "parentObjectId": {
     "name": "obj_Weapon_Parents",

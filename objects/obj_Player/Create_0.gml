@@ -7,10 +7,15 @@ alarm_shield = 20;
 alarm_blackhole = 20;
 alarm_fireball = 20;
 
+global.enemy_limit = 20;
+
 alarm[0] = alarm_slash;
 alarm[1] = alarm_shield;
 alarm[2] = alarm_blackhole;
 alarm[3] = alarm_fireball;
+
+//increase enemy limit
+alarm[11] = 30;
 
 
 //FireBall
@@ -22,7 +27,7 @@ fireball_created = false; // Khởi tạo biến để kiểm tra xem fireball �
 shield_created = false;
 
 //Damage
-dmg_slash = 0;
-dmg_fireball = 0;
-dmg_blackhole = 1;
+dmg_slash = 25;
+dmg_fireball = 25;
+dmg_blackhole = 25;
 dmg_shield = 0;
