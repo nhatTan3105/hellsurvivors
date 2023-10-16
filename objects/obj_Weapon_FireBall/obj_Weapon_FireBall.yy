@@ -35,6 +35,9 @@
     "name": "s_waepon_fireball",
     "path": "sprites/s_waepon_fireball/s_waepon_fireball.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_waepon_fireball",
+    "path": "sprites/s_waepon_fireball/s_waepon_fireball.yy",
+  },
   "visible": true,
 }

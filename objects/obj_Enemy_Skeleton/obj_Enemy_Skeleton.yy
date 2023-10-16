@@ -34,6 +34,9 @@
     "name": "s_enemy_skeleton",
     "path": "sprites/s_enemy_skeleton/s_enemy_skeleton.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_enemy_skeleton",
+    "path": "sprites/s_enemy_skeleton/s_enemy_skeleton.yy",
+  },
   "visible": true,
 }

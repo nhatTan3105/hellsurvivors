@@ -42,5 +42,5 @@ if (isMoving) {
     sprite_index = s_player_run;
 } else {
     // Ngược lại, chuyển sprite sang sprite đứng yên (ví dụ: s_player_idle)
-    sprite_index = s_player_idle;
+    sprite_index = s_player_attack;
 }

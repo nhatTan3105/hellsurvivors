@@ -34,6 +34,9 @@
     "name": "s_enemy_mushroom",
     "path": "sprites/s_enemy_mushroom/s_enemy_mushroom.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_enemy_mushroom",
+    "path": "sprites/s_enemy_mushroom/s_enemy_mushroom.yy",
+  },
   "visible": true,
 }

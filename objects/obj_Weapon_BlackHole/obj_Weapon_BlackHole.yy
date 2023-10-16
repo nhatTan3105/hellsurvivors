@@ -36,6 +36,9 @@
     "name": "s_weapon_blackhole",
     "path": "sprites/s_weapon_blackhole/s_weapon_blackhole.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_weapon_blackhole",
+    "path": "sprites/s_weapon_blackhole/s_weapon_blackhole.yy",
+  },
   "visible": true,
 }

@@ -38,8 +38,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_player_idle",
-    "path": "sprites/s_player_idle/s_player_idle.yy",
+    "name": "s_player_attack",
+    "path": "sprites/s_player_attack/s_player_attack.yy",
   },
   "spriteMaskId": null,
   "visible": true,
