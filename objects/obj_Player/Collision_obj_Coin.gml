@@ -9,7 +9,27 @@ xp += 1;
 if(xp >= xpNextLv){
 	xp = 0; 
 	xpNextLv += xpNextLv;
-	instance_create_depth(0, 0, -2000, obj_UpLevel)
+	
+	var vx= camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2);
+	var vy= camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2);
+	
+	//upgrade fireball
+	global.upgrade = instance_create_depth(vx, vy, -2000, obj_UpLevel)
+	global.upgrade.desY = vy;
+	global.upgrade.image_alpha = 1;
+	global.upgrade.sprite_index = s_waepon_fireball;
+	
+	//upgrade blackhole
+	global.upgrade = instance_create_depth(vx, vy, -2000, obj_UpLevel)
+	global.upgrade.desY = vy -45 ;
+	global.upgrade.image_alpha = 1;
+	global.upgrade.sprite_index = s_weapon_blackhole;
+	
+	//upgrade fireshoot
+	global.upgrade = instance_create_depth(vx, vy, -2000, obj_UpLevel)
+	global.upgrade.desY = vy + 45;
+	global.upgrade.image_alpha = 1;
+	global.upgrade.sprite_index = s_weapon_fireshoot;
 }
 instance_destroy(other.id)
 

@@ -2,18 +2,30 @@ walkSpeed = 1.5;
 
 gamepad_set_axis_deadzone(0, 0.2);
 
-alarm_slash = 80;
+alarm_slash = 60;
 alarm_shield = 20;
-alarm_blackhole = 20;
+alarm_blackhole = 150;
 alarm_fireball = 20;
 alarm_collection = 20;
+alarm_fireshoot = 60;
+alarm_lightbolt = 90;
+
+//weapon damage
+dmg_slash = 60;
+dmg_fireball = 30;
+dmg_blackhole = 40;
+dmg_fireshoot = 30;
+dmg_lightbolt = 70;
+dmg_shield = 0;
 
 global.enemy_limit = 20;
 
-alarm[0] = alarm_slash;
+alarm[0] = 30;
 alarm[1] = alarm_shield;
 alarm[2] = alarm_blackhole;
 alarm[3] = alarm_fireball;
+alarm[5] = alarm_fireshoot;
+alarm[6] = alarm_lightbolt;
 
 //collecting soul
 alarm[4] = alarm_collection;
@@ -30,11 +42,7 @@ fireball_created = false; // Khởi tạo biến để kiểm tra xem fireball �
 //Shield
 shield_created = false;
 
-//Damage
-dmg_slash = 80;
-dmg_fireball = 80;
-dmg_blackhole = 80;
-dmg_shield = 0;
+
 
 //Collect Zone
 collect_zone = 50;
