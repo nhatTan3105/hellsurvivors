@@ -1,5 +1,15 @@
 /// @description Spawn
 // You can write your code in this editor
+
+//Loop
+alarm[0] = alarm_time_spawn;
+if(instance_exists(obj_UpLevel)){
+	image_speed = 0;
+	speed = 0;
+	exit;
+}
+//Pause game when level up
+
 	var _vx = camera_get_view_x(view_camera[0]);
 	var _vy = camera_get_view_y(view_camera[0]);
 	var _vw = camera_get_view_width(view_camera[0]);
@@ -22,8 +32,9 @@
 		instance_create_layer(XXX, YYY, "Instances_1", obj_Enemy_Skeleton)
 	}
 
-	
+
 	//move to object player
+	image_speed = 1;
 	direction = point_direction(x, y, obj_Player.x, obj_Player.y);
 	speed = walkSpeed;
 	if(obj_Player.x > x){
@@ -36,5 +47,4 @@
 	if(sprite_index == sprite_takehit){
 		sprite_index = sprite_none_takehit;
 	}
-//Loop
-alarm[0] = alarm_time_spawn;
+

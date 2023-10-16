@@ -1,3 +1,11 @@
+
+//Pause game when level up
+if(instance_exists(obj_UpLevel)){
+	image_speed = 0;
+	exit;
+}
+image_speed = 1;
+
 // Khai báo một biến để lưu trạng thái của nhân vật
 var isMoving = false;
 
@@ -15,7 +23,7 @@ var ver = (down - up);
 if (gamepad_axis_value(0, gp_axislh) != 0 or gamepad_axis_value(0, gp_axislv) != 0) {
     hor = gamepad_axis_value(0, gp_axislh);
     ver = gamepad_axis_value(0, gp_axislv);
-}
+}	
 
 // Apply movement
 x += hor * walkSpeed;
