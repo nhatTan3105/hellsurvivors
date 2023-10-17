@@ -8,7 +8,7 @@ if(instance_exists(obj_UpLevel)){
 xp += 1;
 if(xp >= xpNextLv){
 	xp = 0; 
-	xpNextLv += xpNextLv;
+	xpNextLv += xpNextLv*0.3;
 	
 	var vx= camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2);
 	var vy= camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2);
@@ -17,19 +17,8 @@ if(xp >= xpNextLv){
 	global.upgrade = instance_create_depth(vx, vy, -2000, obj_UpLevel)
 	global.upgrade.desY = vy;
 	global.upgrade.image_alpha = 1;
-	global.upgrade.sprite_index = s_waepon_fireball;
+	global.upgrade.sprite_index = s_upgrade_slash;
 	
-	//upgrade blackhole
-	global.upgrade = instance_create_depth(vx, vy, -2000, obj_UpLevel)
-	global.upgrade.desY = vy -45 ;
-	global.upgrade.image_alpha = 1;
-	global.upgrade.sprite_index = s_weapon_blackhole;
-	
-	//upgrade fireshoot
-	global.upgrade = instance_create_depth(vx, vy, -2000, obj_UpLevel)
-	global.upgrade.desY = vy + 45;
-	global.upgrade.image_alpha = 1;
-	global.upgrade.sprite_index = s_weapon_fireshoot;
 }
 instance_destroy(other.id)
 

@@ -2,12 +2,9 @@
 // You can write your code in this editor
 
 //Pause game when level up
-
-var slash = instance_create_layer(x, y, "Instances_1", obj_Weapon_Slash);
-slash.image_xscale = image_xscale;
-if(image_xscale == 1){
-slash.addX = 40;
+if(instance_exists(obj_UpLevel)){
+	exit;
 }
-if(image_xscale == -1){
-slash.addX = -40;
-}
+global.slash = instance_create_layer(x, y, "Instances_1", obj_Weapon_Slash);
+global.slash.image_xscale = global.slash_img_xs
+global.slash.image_yscale = global.slash_img_ys

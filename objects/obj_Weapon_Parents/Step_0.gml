@@ -25,8 +25,8 @@ for (var i = 0; i < _num; ++i) {
             // Đẩy enemy lùi khi va chạm
 			
 				 var dir = point_direction(x, y, enemy.x, enemy.y);
-            enemy.x += lengthdir_x(15, dir);
-            enemy.y += lengthdir_y(15, dir);
+            enemy.x += lengthdir_x(global.push_back, dir);
+            enemy.y += lengthdir_y(global.push_back, dir);
 			}else{
 				enemy.hp -= dmg;
 				//show_debug_message("DMG : " + string(dmg));

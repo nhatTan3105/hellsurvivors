@@ -1,6 +1,8 @@
 /// @description Light Bolt
 // You can write your code in this editor
-
+if(instance_exists(obj_UpLevel)){
+	exit;
+}
 // Tìm đối tượng kẻ địch gần nhất
 closest_enemy = noone;
 closest_distance = -1;

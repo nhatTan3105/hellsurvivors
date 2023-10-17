@@ -3,9 +3,12 @@
 
 
 event_inherited()
+addX = 40;
 
-image_xscale = 1.5;
-image_yscale = 1.5;
-dmg = obj_Player.dmg_slash;
+//attribute
+
+alarm_slash = 60;
+dmg_slash = 60;
+
 
 

@@ -13,6 +13,7 @@ if(state == "pop_up"){
 
 if(state == "pop_out"){
 	percent -= 1/25;
+	instance_destroy(obj_UpLevel);
 	var pos= animcurve_channel_evaluate(getCurve, percent);
 	y = desY - pos;
 	if(percent <= 0.01){

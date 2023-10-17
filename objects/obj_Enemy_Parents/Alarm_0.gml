@@ -20,16 +20,20 @@ if(instance_exists(obj_UpLevel)){
 	// Tắt các đối tượng nằm ngoài vùng nhìn của camera (được mở rộng 200 pixel)
 	instance_deactivate_region(_vx - 200, _vy - 200, _vw + 400, _vh + 400, 0, 1);
 	
+	//mushroom position
+	var dir_1 =irandom_range(0, 360);
+	var dir_2 =irandom_range(0, 360);
+	var XX = obj_Player.x + lengthdir_x(440, dir_1);
+	var YY = obj_Player.y + lengthdir_y(440, dir_1);
 	
-	var dir1 =irandom_range(0, 360);
-	var dir2 =irandom_range(0, 360);
-	var XX = obj_Player.x + lengthdir_x(440, dir1);
-	var XXX = obj_Player.x + lengthdir_x(440, dir2);
-	var YY = obj_Player.y + lengthdir_y(440, dir1);
-	var YYY = obj_Player.y + lengthdir_y(440, dir2);
-	if(instance_number(obj_Enemy_Parents) < global.enemy_limit){
-		instance_create_layer(XX, YY, "Instances_1", obj_Enemey_Mushroom)
-		instance_create_layer(XXX, YYY, "Instances_1", obj_Enemy_Skeleton)
+	var XXX = obj_Player.x + lengthdir_x(440, dir_2);
+	var YYY = obj_Player.y + lengthdir_y(440, dir_2);
+	//skeleton position
+
+	if(instance_number(obj_Enemy_Parents) < global.enemy_limit && global.spawn_time <= 150){
+		instance_create_layer(XX, YY, "Instances_1", obj_Enemey_Mushroom);
+	}else if(instance_number(obj_Enemy_Parents) < global.enemy_limit && global.spawn_time <= 300){
+		instance_create_layer(XXX, YYY, "Instances_1", obj_Enemy_Skeleton);
 	}
 
 
