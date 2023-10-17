@@ -45,13 +45,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "s_player_attack",
-    "path": "sprites/s_player_attack/s_player_attack.yy",
-  },
-  "spriteMaskId": {
-    "name": "s_player_idle",
-    "path": "sprites/s_player_idle/s_player_idle.yy",
-  },
+  "spriteId": null,
+  "spriteMaskId": null,
   "visible": true,
 }

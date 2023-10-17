@@ -4,4 +4,4 @@
 
 event_user(0);
 
-alarm[0] = alarm_slash;
+alarm[0] = global.alarm_slash;

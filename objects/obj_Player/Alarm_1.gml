@@ -7,4 +7,4 @@ if(instance_exists(obj_UpLevel)){
 event_user(1);
 
 
-alarm[1] = alarm_shield;
+alarm[1] = global.alarm_shield;

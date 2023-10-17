@@ -3,6 +3,6 @@
 
 event_user(6);
 
-alarm[6] = alarm_lightbolt;
+alarm[6] = global.alarm_lightbolt;
 
 

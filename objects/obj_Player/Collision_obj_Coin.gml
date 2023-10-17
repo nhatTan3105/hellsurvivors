@@ -5,7 +5,7 @@
 if(instance_exists(obj_UpLevel)){
 	exit;
 }
-xp += 1;
+xp += 1*global.xp_bonus;
 if(xp >= xpNextLv){
 	xp = 0; 
 	xpNextLv += xpNextLv*0.3;

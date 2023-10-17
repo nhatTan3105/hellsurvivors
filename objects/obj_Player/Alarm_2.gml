@@ -6,6 +6,6 @@ if(instance_exists(obj_UpLevel)){
 }
 event_user(2);
 
-alarm[2] = alarm_blackhole;
+alarm[2] = global.alarm_blackhole;
 
 

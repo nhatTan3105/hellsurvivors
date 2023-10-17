@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-dmg = 101;
+dmg = global.player_damage;
 

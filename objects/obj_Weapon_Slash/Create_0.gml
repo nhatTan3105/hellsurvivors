@@ -7,8 +7,8 @@ addX = 40;
 
 //attribute
 
-alarm_slash = 60;
-dmg_slash = 60;
+//alarm_slash = global.alarm_slash;
+dmg = global.slash_dmg;
 
 
 

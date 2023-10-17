@@ -47,8 +47,8 @@ if (ver != 0){
 // Change sprite based on movement
 if (isMoving) {
     // Nếu đang di chuyển, chuyển sprite sang s_player_run
-    sprite_index = s_player_run;
+    sprite_index = global.sprite_run;
 } else {
     // Ngược lại, chuyển sprite sang sprite đứng yên (ví dụ: s_player_idle)
-    sprite_index = s_player_attack;
+    sprite_index = global.sprite_idle;
 }

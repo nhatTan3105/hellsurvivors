@@ -7,6 +7,6 @@ if(instance_exists(obj_UpLevel)){
 }
 event_user(3);
 
-alarm[3] = alarm_fireball;
+alarm[3] = global.alarm_fireball;
 
 

@@ -3,6 +3,6 @@
 
 event_user(5);
 
-alarm[5] = alarm_fireshoot;
+alarm[5] = global.alarm_fireshoot;
 
 

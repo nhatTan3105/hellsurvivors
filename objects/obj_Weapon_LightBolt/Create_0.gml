@@ -11,4 +11,4 @@ image_xscale = 0.8;
 image_yscale = 0.8;
 light_bolt_time = 40;
 alarm[0] = light_bolt_time;
-dmg = obj_Player.dmg_lightbolt;
+dmg = global.lightbolt_dmg;
