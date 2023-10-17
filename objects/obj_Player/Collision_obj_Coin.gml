@@ -47,13 +47,13 @@ if(xp >= xpNextLv){
 	    switch (obj_name) {
 		    case "slash":
 		        if (!variable_global_exists("slash_lvl")) {
-		            global.slash_lvl = 1;
+		            global.slash_lvl = 0;
 		        }
 		        level = global.slash_lvl;
 		        break;
 		    case "lightbolt":
 		        if (!variable_global_exists("lightbolt_lvl")) {
-		            global.lightbolt_lvl = 1;
+		            global.lightbolt_lvl = 0;
 		        }
 		        level = global.lightbolt_lvl;
 		        break;
@@ -62,7 +62,7 @@ if(xp >= xpNextLv){
 		        break;
 		    case "fireshoot":
 		        if (!variable_global_exists("fireshoot_lvl")) {
-		            global.fireshoot_lvl = 1;
+		            global.fireshoot_lvl = 0;
 		        }
 		        level = global.fireshoot_lvl;
 		        break;
@@ -86,7 +86,7 @@ if(xp >= xpNextLv){
             current_upgrade.desY = vy - xx;
             current_upgrade.image_alpha = 1;
             current_upgrade.sprite_index = asset_get_index(sprite_name);
-			show_debug_message(string(variable_name) + ", lvl:" + string(obj_uplv_name))
+			show_debug_message(string(sprite_name) + ": " + string(level))
 	        drawn_count += 1;
 	        xx += 50; // Tăng giá trị của xx thêm 50
 	    }

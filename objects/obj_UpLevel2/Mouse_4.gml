@@ -33,6 +33,7 @@ if(obj_UpLevel2.sprite_index == s_upgrade_slash){
 else if(obj_UpLevel2.sprite_index == s_upgrade_shield){
 	if(global.alarm_shield == -1){
 		global.alarm_shield = 20;
+		global.shield_lvl = 1;
 		obj_Player.alarm[1] = global.alarm_shield;
 	}else{
 		//+30% push back
@@ -48,6 +49,7 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_shield){
 else if(obj_UpLevel2.sprite_index == s_upgrade_fireshoot){
 	if(global.alarm_fireshoot == -1){
 		global.alarm_fireshoot = 60;
+		global.fireshoot_lvl = 1;
 		obj_Player.alarm[5] = global.alarm_fireshoot;
 	}else{
 		//-20% countdown
@@ -63,17 +65,24 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_fireshoot){
 }
 //lightbolt
 else if(obj_UpLevel2.sprite_index == s_upgrade_lightbolt){
+	if(global.alarm_lightbolt == -1){
+		global.alarm_lightbolt = 60;
+		global.lightbolt_lvl = 1;
+		obj_Player.alarm[6] = global.alarm_lightbolt;
+	}else{
 	//-50% countdown
 	global.alarm_lightbolt -= global.alarm_lightbolt*0.5;
 	//+50% dmg
 	global.lightbolt_dmg += global.lightbolt_dmg*0.5
 	global.lightbolt_lvl += 1;
+	}
 	
 }
 //blackhole
 else if(obj_UpLevel2.sprite_index == s_upgrade_blackhole){
 	if(global.alarm_blackhole== -1){
 		global.alarm_blackhole = 60;
+		global.blackhole_lvl = 1;
 		obj_Player.alarm[2] = global.alarm_blackhole;
 	}else{
 		//-50% countdown
@@ -90,7 +99,8 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_blackhole){
 //fireball
 else if(obj_UpLevel2.sprite_index == s_upgrade_fireball){
 	if(global.alarm_fireball == -1){
-		global.alarm_fireball = 60;
+		global.alarm_fireball = 60
+		global.fireball_lvl = 1;
 		obj_Player.alarm[3] = global.alarm_fireball;
 	}else{
 		//-50% countdown

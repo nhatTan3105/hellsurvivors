@@ -6,7 +6,6 @@ if(!global.pause){
 	global.spawn_time += 30;
 	
 	alarm[11] = 150;
-	show_debug_log(true);
 }else{
 	alarm[11] = 150;
 }

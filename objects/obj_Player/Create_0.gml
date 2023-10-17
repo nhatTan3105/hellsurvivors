@@ -1,5 +1,4 @@
 gamepad_set_axis_deadzone(0, 0.2);
-
 //const
 walkSpeed = 1.5;
 global.pause = false;
