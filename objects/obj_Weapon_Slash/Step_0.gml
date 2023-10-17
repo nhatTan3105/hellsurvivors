@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 event_inherited();
-if(instance_exists(obj_UpLevel)){
+if(instance_exists(obj_UpLevel0)){
 	exit;
 }
 

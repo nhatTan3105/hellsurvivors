@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-if(!instance_exists(obj_UpLevel)){
+if(!instance_exists(obj_UpLevel0)){
 	image_speed = 1;
 		// Đặt hướng ngẫu nhiên cho obj_fireshoot khi nó được tạo ra
 	if (!direction_set) {

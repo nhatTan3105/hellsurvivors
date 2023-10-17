@@ -3,7 +3,7 @@
 
 //Loop
 alarm[0] = alarm_time_spawn;
-if(instance_exists(obj_UpLevel)){
+if(instance_exists(obj_UpLevel0)){
 	image_speed = 0;
 	speed = 0;
 	exit;

@@ -18,7 +18,7 @@ function array_shuffle(array) {
 }
 
 //Pause game when level up
-if(instance_exists(obj_UpLevel)){
+if(instance_exists(obj_UpLevel0)){
 	exit;
 }
 xp += 1*global.xp_bonus;
@@ -38,8 +38,7 @@ if(xp >= xpNextLv){
 	// Đếm số lượng đối tượng đã vẽ
 	var drawn_count = 0;
 	var xx = 0; // Khởi tạo giá trị xx
-	// Khởi tạo biến đếm cho tên biến
-	var upgrade_count = 0;
+	var variable_count = 0; // Biến đếm tên biến
 	for (var i = 0; i < 6; i++) {
 	    // Lấy tên đối tượng hiện tại
 	    var obj_name = obj_names[i];
@@ -79,11 +78,15 @@ if(xp >= xpNextLv){
 	        var sprite_name = "s_upgrade_" + string(obj_name);
 			//var obj_index = asset_get_index(obj_name);
 			
-	        global.upgrade = instance_create_depth(vx, vy - xx , -2000, obj_UpLevel);
-	        global.upgrade.desY = vy -xx;
-	        global.upgrade.image_alpha = 1;
-	        global.upgrade.sprite_index = asset_get_index(sprite_name);
-			show_debug_message(string(sprite_name) + ", lvl:" + string(level))
+			var variable_name = "global.upgrade" + string(variable_count);
+			var obj_uplv_name = "obj_UpLevel" + string(variable_count);
+            variable_count += 1;
+            variable_global_set(variable_name, instance_create_depth(vx, vy, -2000, asset_get_index(obj_uplv_name)));
+            var current_upgrade = variable_global_get(variable_name);
+            current_upgrade.desY = vy - xx;
+            current_upgrade.image_alpha = 1;
+            current_upgrade.sprite_index = asset_get_index(sprite_name);
+			show_debug_message(string(variable_name) + ", lvl:" + string(obj_uplv_name))
 	        drawn_count += 1;
 	        xx += 50; // Tăng giá trị của xx thêm 50
 	    }

@@ -1,6 +1,6 @@
 
 //Pause game when level up
-if(instance_exists(obj_UpLevel)){
+if(instance_exists(obj_UpLevel0)){
 	image_speed = 0;
 	exit;
 }
@@ -54,9 +54,9 @@ if (isMoving) {
 }
 
 // Lặp qua tất cả các đối tượng của lớp obj_UpLevel và hủy chúng
-var num_uplevels = instance_number(obj_UpLevel);
+var num_uplevels = instance_number(obj_UpLevel0);
 for (var i = 0; i < num_uplevels; i++) {
-    var uplevel_instance = instance_find(obj_UpLevel, i);
+    var uplevel_instance = instance_find(obj_UpLevel0, i);
     if (uplevel_instance != noone) {
         instance_destroy(uplevel_instance);
     }

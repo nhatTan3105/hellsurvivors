@@ -1,7 +1,7 @@
 /// @description FireShoot
 // You can write your code in this editor
 
-if(instance_exists(obj_UpLevel)){
+if(instance_exists(obj_UpLevel0)){
 	exit;
 }
 

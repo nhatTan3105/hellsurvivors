@@ -1,5 +1,5 @@
 event_inherited();
-if(instance_exists(obj_UpLevel)){
+if(instance_exists(obj_UpLevel0)){
 	image_speed = 0;
 	exit;
 }

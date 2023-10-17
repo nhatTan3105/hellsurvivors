@@ -1,13 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(instance_exists(obj_UpLevel)){
+if (!global.pause && can_collect) {
+    // Tính toán hướng và vận tốc
+	image_speed = 1;
+    direction = point_direction(x, y, obj_Player.x, obj_Player.y);
+    speed = 1.3;
+    
+    // Cập nhật vận tốc dựa trên hướng và speed
+    motion_set(direction, speed);
+} else {
+    // Nếu đang trong trạng thái pause, dừng vận tốc của đối tượng
 	image_speed = 0;
+    motion_set(0, 0);
 }
 
-image_speed = 1;
-if(can_collect == true){
-	move_towards_point(obj_Player.x, obj_Player.y, 1.3);
-}
+
+
+
 
 
 

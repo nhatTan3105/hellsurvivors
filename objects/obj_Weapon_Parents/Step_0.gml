@@ -1,6 +1,6 @@
 
 //Pause game when level up
-if(instance_exists(obj_UpLevel)){
+if(instance_exists(obj_UpLevel0)){
 	exit;
 }
 
