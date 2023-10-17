@@ -30,9 +30,9 @@ if(instance_exists(obj_UpLevel)){
 	var YYY = obj_Player.y + lengthdir_y(440, dir_2);
 	//skeleton position
 
-	if(instance_number(obj_Enemy_Parents) < global.enemy_limit && global.spawn_time <= 150){
+	if(instance_number(obj_Enemy_Parents) < global.enemy_limit && global.spawn_time <= 3600){
 		instance_create_layer(XX, YY, "Instances_1", obj_Enemey_Mushroom);
-	}else if(instance_number(obj_Enemy_Parents) < global.enemy_limit && global.spawn_time <= 300){
+	}else if(instance_number(obj_Enemy_Parents) < global.enemy_limit && global.spawn_time <= 3600){
 		instance_create_layer(XXX, YYY, "Instances_1", obj_Enemy_Skeleton);
 	}
 

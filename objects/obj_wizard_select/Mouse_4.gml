@@ -16,6 +16,7 @@ global.sprite_takehit = s_wizard_takehit;
 global.alarm_fireshoot = -1;
 global.alarm_slash = -1;
 global.alarm_lightbolt = 60;
+global.lightbolt_lvl = 1;
 room_goto(room_main);
 
 

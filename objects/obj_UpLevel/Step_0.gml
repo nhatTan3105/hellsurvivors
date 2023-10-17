@@ -12,6 +12,7 @@ if(state == "pop_up"){
 }
 
 if(state == "pop_out"){
+	global.pause = false;
 	percent -= 1/25;
 	instance_destroy(obj_UpLevel);
 	var pos= animcurve_channel_evaluate(getCurve, percent);

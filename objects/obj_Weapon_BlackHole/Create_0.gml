@@ -5,7 +5,7 @@ black_hole_time = 120;
 alarm[0] = black_hole_time;
 
 event_inherited()
-dmg = obj_Player.dmg_blackhole;
+dmg = global.blackhole_dmg;
 
 
 

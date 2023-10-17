@@ -15,6 +15,7 @@ global.sprite_takehit = s_warrior_takehit;
 //default skill
 global.alarm_fireshoot = -1;
 global.alarm_slash = 60;
+global.slash_lvl = 1;
 global.alarm_lightbolt = -1;
 room_goto(room_main);
 

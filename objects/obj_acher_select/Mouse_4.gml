@@ -14,6 +14,7 @@ global.sprite_takehit = s_acher_takehit;
 
 //default skill
 global.alarm_fireshoot = 40;
+global.fireshoot_lvl = 1;
 global.alarm_slash = -1;
 global.alarm_lightbolt = -1;
 room_goto(room_main);

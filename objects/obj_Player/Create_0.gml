@@ -1,22 +1,14 @@
 gamepad_set_axis_deadzone(0, 0.2);
 
-
-walkSpeed = 1.5;
-
 //const
-
-
-
-//no used
-dmg_fireball = 0;
-dmg_blackhole = 0;
-dmg_fireshoot = 0;
-dmg_lightbolt = 0;
-dmg_shield = 0;
-
+walkSpeed = 1.5;
 global.pause = false;
 global.enemy_limit = 20;
 global.spawn_time = 0;
+
+global.fireball_lvl = 0;
+global.shield_lvl = 0;
+global.blackhole_lvl = 0;
 
 //ready start
 //global.player_hp = 10;
@@ -40,13 +32,14 @@ global.fireshoot_dmg = global.player_damage*2
 //global.alarm_fireshoot = -1; //countdown
 
 //lightbolt attribute
-
 global.lightbolt_dmg = global.player_damage*6;
 
 //blackhole attribute
+global.blackhole_dmg = global.player_damage*2;
 global.alarm_blackhole = -1;
 
 //fireball attribute
+global.fireball_dmg = global.player_damage*5;
 global.alarm_fireball = -1;
 
 
@@ -74,10 +67,8 @@ fireball_created = false; // Khởi tạo biến để kiểm tra xem fireball �
 //Shield
 shield_created = false;
 
-
-
 //Collect Zone
-collect_zone = 50;
+collect_zone = 500;
 
 //XP system
 xp = 0;

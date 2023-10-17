@@ -52,3 +52,12 @@ if (isMoving) {
     // Ngược lại, chuyển sprite sang sprite đứng yên (ví dụ: s_player_idle)
     sprite_index = global.sprite_idle;
 }
+
+// Lặp qua tất cả các đối tượng của lớp obj_UpLevel và hủy chúng
+var num_uplevels = instance_number(obj_UpLevel);
+for (var i = 0; i < num_uplevels; i++) {
+    var uplevel_instance = instance_find(obj_UpLevel, i);
+    if (uplevel_instance != noone) {
+        instance_destroy(uplevel_instance);
+    }
+}
