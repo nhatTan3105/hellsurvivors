@@ -10,10 +10,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "obj_uplevel",
+    "path": "folders/Objects/obj_uplevel.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_UpLevel",
+    "path": "objects/obj_UpLevel/obj_UpLevel.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

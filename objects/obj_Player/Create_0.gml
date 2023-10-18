@@ -34,7 +34,7 @@ global.fireshoot_dmg = global.player_damage*3;
 //global.alarm_fireshoot = -1; //countdown
 
 //lightbolt attribute
-global.lightbolt_dmg = global.player_damage*2;
+global.lightbolt_dmg = global.player_damage*3;
 
 //blackhole attribute
 global.blackhole_count = 0;
