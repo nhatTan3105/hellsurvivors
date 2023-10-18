@@ -9,10 +9,13 @@ global.fireball_lvl = 0;
 global.shield_lvl = 0;
 global.blackhole_lvl = 0;
 
+global.fireball_created = 0;
+
 //ready start
 //global.player_hp = 10;
 //global.player_damage = 0;
 //global.xp_bonus = 1;
+
 
 //slash attribute
 //global.alarm_slash = -1;
@@ -27,17 +30,19 @@ global.shield_img_xs = 1;
 global.shield_img_ys = 1;
 
 //fireshoot attribute
-global.fireshoot_dmg = global.player_damage*2
+global.fireshoot_dmg = global.player_damage*3;
 //global.alarm_fireshoot = -1; //countdown
 
 //lightbolt attribute
-global.lightbolt_dmg = global.player_damage*6;
+global.lightbolt_dmg = global.player_damage*2;
 
 //blackhole attribute
-global.blackhole_dmg = global.player_damage*2;
+global.blackhole_count = 0;
+global.blackhole_dmg = global.player_damage*1;
 global.alarm_blackhole = -1;
 
 //fireball attribute
+global.fireball_count = 0;
 global.fireball_dmg = global.player_damage*5;
 global.alarm_fireball = -1;
 
@@ -46,7 +51,7 @@ global.alarm_fireball = -1;
 alarm[0] = global.alarm_slash;
 alarm[1] = global.alarm_shield;
 alarm[2] = global.alarm_blackhole;
-alarm[3] = global.alarm_fireball;
+//alarm[3] = global.alarm_fireball;
 alarm[5] = global.alarm_fireshoot;
 alarm[6] = global.alarm_lightbolt;
 

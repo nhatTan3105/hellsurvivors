@@ -1,8 +1,9 @@
 /// @description Light Bolt
 // You can write your code in this editor
-if(instance_exists(obj_UpLevel0)){
-	exit;
+if (instance_exists(obj_UpLevel0)) {
+    exit;
 }
+
 // Tìm đối tượng kẻ địch gần nhất
 closest_enemy = noone;
 closest_distance = -1;
@@ -27,4 +28,9 @@ if (closest_enemy != noone) {
     }
     var light_bolt = instance_create_layer(closest_enemy.x + xOffset, closest_enemy.y + 2, "Instances_1", obj_Weapon_LightBolt);
     light_bolt.depth = closest_enemy.depth - 1;
+    
+    // Kiểm tra xem vị trí của light_bolt có nằm trong viewport không
+    if (!point_in_rectangle(light_bolt.x, light_bolt.y, view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0])) {
+        instance_destroy(light_bolt); // Hủy light_bolt nếu nó không nằm trong viewport
+    }
 }

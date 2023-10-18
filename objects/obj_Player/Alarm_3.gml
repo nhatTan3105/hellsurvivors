@@ -5,8 +5,12 @@
 if(instance_exists(obj_UpLevel0)){
 	exit;
 }
-event_user(3);
+//if(global.fireball_created <= global.fireball_count){
+	
+	//global.fireball_created = 0;
+	event_user(3);
+	//alarm[3] = global.alarm_fireball;
+//}
 
-alarm[3] = global.alarm_fireball;
 
 

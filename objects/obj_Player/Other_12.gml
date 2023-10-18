@@ -5,6 +5,11 @@
 if(instance_exists(obj_UpLevel0)){
 	exit;
 }
-var random_x1 = random_range(-200, 200);
-var random_y1 = random_range(-200, 200);
-var black_hole = instance_create_layer(x + random_x1, y + random_y1, "Instances_1", obj_Weapon_BlackHole);
+for(i = 0; i < global.blackhole_count; i++){
+	var randomx = "random_x" + string(i);
+	var randomy = "random_y" + string(i);
+	var randomx = random_range(-200, 200);
+	var randomy = random_range(-200, 200);
+	var black_hole = instance_create_layer(x + randomx, y + randomy, "Instances_1", obj_Weapon_BlackHole);
+}
+
