@@ -8,8 +8,39 @@ global.spawn_time = 0;
 global.fireball_lvl = 0;
 global.shield_lvl = 0;
 global.blackhole_lvl = 0;
+global.elapsed_time  = 0;
+global.player_mana = 0;
+global.player_max_hp = global.player_hp;
 
 global.fireball_created = 0;
+
+global.skills_slot = ds_list_create();
+if(global.player_class == "acher"){
+	ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_fireshoot));
+	global.pick_slash = false;
+	global.pick_lightbolt = false;
+	global.pick_fireshoot = true;
+	global.pick_fireball = false;
+	global.pick_shield = false;
+	global.pick_blackhole = false;
+}else if(global.player_class == "warrior"){
+	ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_slash));
+	global.pick_slash = true;
+	global.pick_lightbolt = false;
+	global.pick_fireshoot = false;
+	global.pick_fireball = false;
+	global.pick_shield = false;
+	global.pick_blackhole = false;
+}else if(global.player_class == "wizard"){
+	ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_lightbolt));
+	global.pick_slash = false;
+	global.pick_lightbolt = true;
+	global.pick_fireshoot = false;
+	global.pick_fireball = false;
+	global.pick_shield = false;
+	global.pick_blackhole = false;
+}
+
 
 //ready start
 //global.player_hp = 10;
@@ -72,8 +103,9 @@ fireball_created = false; // Khởi tạo biến để kiểm tra xem fireball �
 shield_created = false;
 
 //Collect Zone
-collect_zone = 500;
+collect_zone = 50;
 
 //XP system
 xp = 0;
 xpNextLv = 4;
+

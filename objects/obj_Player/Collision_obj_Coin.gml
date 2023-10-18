@@ -26,7 +26,8 @@ if(xp >= xpNextLv){
 	xp = 0; 
 	xpNextLv += xpNextLv*0.3;
 	//xpNextLv = 4;
-	
+
+
 	var vx= camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2);
 	var vy= camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2);
 	
@@ -86,7 +87,7 @@ if(xp >= xpNextLv){
             current_upgrade.desY = vy - xx;
             current_upgrade.image_alpha = 1;
             current_upgrade.sprite_index = asset_get_index(sprite_name);
-			show_debug_message(string(sprite_name) + ": " + string(level))
+			//show_debug_message(string(sprite_name) + ": " + string(level))
 	        drawn_count += 1;
 	        xx += 50; // Tăng giá trị của xx thêm 50
 	    }

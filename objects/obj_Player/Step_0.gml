@@ -6,6 +6,11 @@ if(instance_exists(obj_UpLevel0)){
 }
 image_speed = 1;
 
+global.elapsed_time += 1/60;
+if(global.player_mana <= 10){
+	global.player_mana += 1/60;
+}
+
 // Khai báo một biến để lưu trạng thái của nhân vật
 var isMoving = false;
 
@@ -63,5 +68,15 @@ for (var i = 0; i < num_uplevels; i++) {
         instance_destroy(uplevel_instance);
     }
 }
+
+// Cập nhật tọa độ camera để theo dõi obj_Player
+camera_set_view_pos(view_camera[0], x - camera_get_view_width(view_camera[0]) / 2, y - camera_get_view_height(view_camera[0]) / 2);
+
+// Cập nhật tọa độ viewport để theo dõi obj_Player
+view_xview[0] = x - view_wview[0] / 2;
+view_yview[0] = y - view_hview[0] / 2;
+
+
+
 
 

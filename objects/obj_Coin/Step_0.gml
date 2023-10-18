@@ -4,7 +4,7 @@ if (!global.pause && can_collect) {
     // Tính toán hướng và vận tốc
 	image_speed = 1;
     direction = point_direction(x, y, obj_Player.x, obj_Player.y);
-    speed = 1.3;
+    speed = 1.4;
     
     // Cập nhật vận tốc dựa trên hướng và speed
     motion_set(direction, speed);

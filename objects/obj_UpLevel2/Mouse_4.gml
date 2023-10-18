@@ -13,6 +13,8 @@ if(obj_UpLevel2.sprite_index == s_upgrade_slash){
 			//up lvl
 			global.slash_lvl += 1;
 			obj_Player.alarm[0] = global.alarm_slash;
+			global.pick_slash = true;
+			ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_slash));
 			show_debug_message("Slash lvl:" + string(global.slash_lvl))
 		}else{
 			//-10% countdown
@@ -25,6 +27,7 @@ if(obj_UpLevel2.sprite_index == s_upgrade_slash){
 			//+50% size
 			global.slash_img_xs += global.slash_img_xs*0.2;
 			global.slash_img_ys += global.slash_img_ys*0.2;
+			global.pick_slash = true;
 		}
 	
 }
@@ -35,6 +38,8 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_shield){
 		global.shield_lvl = 1;
 		obj_Player.alarm[1] = global.alarm_shield;
 		show_debug_message("shield lvl:" + string(global.shield_lvl))
+		global.pick_shield = true;
+		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_shield));
 	}else{
 		//+30% push back
 		global.push_back += global.push_back*0.3;
@@ -43,17 +48,19 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_shield){
 		global.shield_img_ys += global.shield_img_xs*0.2;
 		global.shield_lvl += 1;
 		show_debug_message("shield lvl:" + string(global.shield_lvl))
-		
+		global.pick_shield = true;
 	}
 	
 }
 //Fireshoot upgrade
 else if(obj_UpLevel2.sprite_index == s_upgrade_fireshoot){
 	if(global.alarm_fireshoot == -1){
-		global.alarm_fireshoot = 60;
+		global.alarm_fireshoot = 40;
 		global.fireshoot_lvl = 1;
 		obj_Player.alarm[5] = global.alarm_fireshoot;
 		show_debug_message("fireshoot lvl:" + string(global.fireshoot_lvl))
+		global.pick_fireshoot = true;
+		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_fireshoot));
 	}else{
 		//-20% countdown
 		global.alarm_fireshoot -= global.alarm_fireshoot*0.2;
@@ -61,7 +68,7 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_fireshoot){
 		global.fireshoot_dmg += global.fireshoot_dmg*0.5
 		global.fireshoot_lvl += 1;
 		show_debug_message("fireshoot lvl:" + string(global.fireshoot_lvl))
-		
+		global.pick_fireshoot = true;
 	}
 	
 		
@@ -74,6 +81,8 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_lightbolt){
 		global.lightbolt_lvl = 1;
 		obj_Player.alarm[6] = global.alarm_lightbolt;
 		show_debug_message("lightbolt lvl:" + string(global.lightbolt_lvl))
+		global.pick_lightbolt = true;
+		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_lightbolt));
 	}else{
 	//-30% countdown
 	global.alarm_lightbolt -= global.alarm_lightbolt*0.3;
@@ -81,6 +90,7 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_lightbolt){
 	global.lightbolt_dmg += global.lightbolt_dmg*0.3;
 	global.lightbolt_lvl += 1;
 	show_debug_message("lightbolt lvl:" + string(global.lightbolt_lvl))
+	global.pick_lightbolt = true;
 	}
 	
 }
@@ -92,6 +102,8 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_blackhole){
 		global.blackhole_count += 1;
 		obj_Player.alarm[2] = global.alarm_blackhole;
 		show_debug_message("blackhole lvl:" + string(global.blackhole_lvl))
+		global.pick_blackhole = true;
+		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_blackhole));
 	}else{
 		//-30% countdown
 		global.alarm_blackhole -= global.alarm_blackhole*0.3;
@@ -101,8 +113,9 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_blackhole){
 		global.blackhole_count+=1;
 		obj_Player.alarm[2] = global.alarm_blackhole;
 		show_debug_message("blackhole lvl:" + string(global.blackhole_lvl))
+		global.pick_blackhole = true;
 	}
-	
+
 }
 //fireball
 else if(obj_UpLevel2.sprite_index == s_upgrade_fireball){
@@ -112,6 +125,8 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_fireball){
 		global.fireball_count += 1;
 		obj_Player.alarm[3] = global.alarm_fireball;
 		show_debug_message("fireball lvl:" + string(global.fireball_lvl))
+		global.pick_fireball = true;
+		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_fireball));
 	}else{
 		//-50% countdown
 		global.alarm_fireball -= global.alarm_fireball*0.5;
@@ -121,8 +136,8 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_fireball){
 		global.fireball_lvl += 1;
 		obj_Player.alarm[3] = global.alarm_fireball
 		show_debug_message("fireball lvl:" + string(global.fireball_lvl))
+		global.pick_fireball = true;
 	}
-	
 }
 
 global.pause = false;
