@@ -15,6 +15,8 @@ var right = keyboard_check(vk_right);
 var up = keyboard_check(vk_up);
 var down = keyboard_check(vk_down);
 
+var control_press = keyboard_check(vk_control);
+
 // Movement, Combined
 var hor = (right - left);
 var ver = (down - up);
@@ -61,3 +63,5 @@ for (var i = 0; i < num_uplevels; i++) {
         instance_destroy(uplevel_instance);
     }
 }
+
+

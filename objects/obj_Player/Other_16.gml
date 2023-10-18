@@ -26,11 +26,13 @@ if (closest_enemy != noone) {
     if (closest_enemy.image_xscale == -1) {
         xOffset = -2; // Điều chỉnh vị trí khi closest_enemy hướng về bên trái
     }
-    var light_bolt = instance_create_layer(closest_enemy.x + xOffset, closest_enemy.y + 2, "Instances_1", obj_Weapon_LightBolt);
-    light_bolt.depth = closest_enemy.depth - 1;
     
     // Kiểm tra xem vị trí của light_bolt có nằm trong viewport không
-    if (!point_in_rectangle(light_bolt.x, light_bolt.y, view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0])) {
-        instance_destroy(light_bolt); // Hủy light_bolt nếu nó không nằm trong viewport
+    var light_bolt_x = closest_enemy.x + xOffset;
+    var light_bolt_y = closest_enemy.y + 2;
+    
+    if (point_in_rectangle(light_bolt_x, light_bolt_y, view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0])) {
+        var light_bolt = instance_create_layer(light_bolt_x, light_bolt_y, "Instances_1", obj_Weapon_LightBolt);
+        light_bolt.depth = closest_enemy.depth - 1;
     }
 }
