@@ -17,16 +17,18 @@ if(obj_UpLevel2.sprite_index == s_upgrade_slash){
 			ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_slash));
 			show_debug_message("Slash lvl:" + string(global.slash_lvl))
 		}else{
-			//-10% countdown
-			global.alarm_slash -= global.alarm_slash*0.1;
+						//-20% countdown
+			global.alarm_slash -= global.alarm_slash*0.2;
 			//up lvl
 			global.slash_lvl += 1;
 			//+50% dmg 
 			global.slash_dmg += global.slash_dmg*0.5; 
 			show_debug_message("Slash lvl:" + string(global.slash_lvl))
-			//+50% size
+			//+30% size
 			global.slash_img_xs += global.slash_img_xs*0.2;
 			global.slash_img_ys += global.slash_img_ys*0.2;
+			//+50% hitbox
+			global.addX_Slash += global.addX_Slash*0.1;
 			global.pick_slash = true;
 		}
 	
@@ -60,6 +62,7 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_fireshoot){
 		obj_Player.alarm[5] = global.alarm_fireshoot;
 		show_debug_message("fireshoot lvl:" + string(global.fireshoot_lvl))
 		global.pick_fireshoot = true;
+		global.fireshoot_count += 1;
 		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_fireshoot));
 	}else{
 		//-20% countdown
@@ -69,6 +72,7 @@ else if(obj_UpLevel2.sprite_index == s_upgrade_fireshoot){
 		global.fireshoot_lvl += 1;
 		show_debug_message("fireshoot lvl:" + string(global.fireshoot_lvl))
 		global.pick_fireshoot = true;
+		global.fireshoot_count += 1;
 	}
 	
 		
@@ -144,7 +148,7 @@ global.pause = false;
 instance_destroy(obj_UpLevel0);
 instance_destroy(obj_UpLevel1);
 instance_destroy(obj_UpLevel2);
-
+instance_destroy(obj_UpLevelGUI)
 
 
 

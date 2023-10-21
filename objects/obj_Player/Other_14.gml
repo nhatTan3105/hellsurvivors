@@ -14,7 +14,17 @@ if (_num > 0)
         _list[| i].can_collect = true;
     }
 }
+var _list1 = ds_list_create();
+var _num1 = collision_circle_list(obj_Player.x, obj_Player.y, obj_Player.collect_zone, obj_Heart, false, true, _list1, false);
+if (_num1 > 0)
+{
+    for (var i = 0; i < _num1; ++i;)
+    {
+        _list1[| i].can_collect = true;
+    }
+}
 ds_list_destroy(_list);
+ds_list_destroy(_list1);
 
 
 

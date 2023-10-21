@@ -5,7 +5,7 @@ if(state == "idle"){
 	obj_warrior_select.state = "pop_out";
 	image_blend = c_grey;
 }
-global.player_hp = 100;
+global.player_hp = 100000;
 global.player_damage = 14;
 global.xp_bonus = 1;
 global.sprite_idle = s_acher_attack;

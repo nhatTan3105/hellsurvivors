@@ -8,9 +8,9 @@ if(instance_exists(obj_UpLevel0)){
 
 if(obj_Player.image_xscale == -1){
 	image_xscale = -1;
-	addX = -40;
+	addX = -global.addX_Slash;
 }else{
-	addX = 40;
+	addX = global.addX_Slash;
 }
 
 x = obj_Player.x + addX*1.3;

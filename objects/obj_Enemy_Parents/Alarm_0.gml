@@ -30,12 +30,38 @@ if(instance_exists(obj_UpLevel0)){
 	var YYY = obj_Player.y + lengthdir_y(440, dir_2);
 	//skeleton position
 
-	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time <= 360){
-		instance_create_layer(XX, YY, "Instances_1", obj_Enemey_Mushroom);
-	}else if(instance_number(obj_Enemy_Parents) < global.enemy_limit && global.spawn_time <= 3600){
-		instance_create_layer(XXX, YYY, "Instances_1", obj_Enemy_Skeleton);
+	//level 1 = 120s = 3600 steps;
+	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
+		instance_create_layer(XX, YY, "Instances_1", obj_Enemey_FlyEye);
 	}
-
+	if(global.boss1_created == false && global.spawn_time >= 3600){
+			instance_create_layer(XX, YY, "Instances_1", obj_Boss1_Executioner);
+			global.boss1_created = true;
+	}
+	//level 2 = 120s = 3600 steps;
+	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time >= 3600){
+		instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Goblin);
+	}
+	if(global.boss2_created == false && global.spawn_time >= 7200){
+			instance_create_layer(XX, YY, "Instances_1", obj_Boss2_Axe);
+			global.boss2_created = true;
+	}
+	//level 3 = 120s = 3600 steps;
+	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time >= 7200){
+		instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Mushroom);
+	}
+	if(global.boss3_created == false && global.spawn_time >= 10800){
+			instance_create_layer(XX, YY, "Instances_1", obj_Boss3_Death);
+			global.boss3_created = true;
+	}
+	//level 4 = 120s = 3600 steps;
+	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time >= 1080){
+		instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Goblin);
+	}
+	if(global.boss4_created == false && global.spawn_time >= 1440){
+			instance_create_layer(XX, YY, "Instances_1", obj_Boss4_Demon);
+			global.boss4_created = true;
+	}
 
 	//move to object player
 	image_speed = 1;

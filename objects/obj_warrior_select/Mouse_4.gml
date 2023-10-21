@@ -19,5 +19,3 @@ global.slash_lvl = 1;
 global.alarm_lightbolt = -1;
 global.player_class = "warrior";
 room_goto(room_main);
-
-

@@ -1,9 +1,7 @@
 // Inherit the parent event
 event_inherited();
-
 if (!instance_exists(obj_UpLevel0)) {
     image_speed = 1;
-    
     // Đặt hướng ngẫu nhiên cho obj_fireshoot khi nó được tạo ra
     if (!direction_set) {
         direction = random(360);
@@ -11,7 +9,7 @@ if (!instance_exists(obj_UpLevel0)) {
     }
 
     // Di chuyển obj_fireshoot theo hướng đã đặt
-    motion_set(direction, 1.3);
+    motion_set(direction, 1.6);
 
     // Đặt góc của sprite theo hướng di chuyển
     image_angle = direction;
@@ -24,3 +22,8 @@ if (!instance_exists(obj_UpLevel0)) {
     image_speed = 0;
     speed = 0;
 }
+
+
+
+
+

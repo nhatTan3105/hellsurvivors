@@ -21,16 +21,16 @@ function array_shuffle(array) {
 if(instance_exists(obj_UpLevel0)){
 	exit;
 }
-xp += 1*global.xp_bonus;
-if(xp >= xpNextLv){
-	xp = 0; 
-	xpNextLv += xpNextLv*0.3;
+global.xp += 1*global.xp_bonus;
+if(global.xp >= global.xpNextLv){
+	global.xp = 0; 
+	global.xpNextLv += global.xpNextLv*0.4;
 	//xpNextLv = 4;
-
-
+	//Draw GUI Up lv
+	
 	var vx= camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2);
 	var vy= camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2);
-	
+	instance_create_depth(vx - 100, vy - 140, -1000, obj_UpLevelGUI); // Tạo và vẽ đối tượng obj_levelup_gui phía dưới các s_upgrade
 	// Định danh của các đối tượng cần vẽ
 	var obj_names = ["slash", "lightbolt", "fireball", "fireshoot", "shield", "blackhole"];
 	//var obj_names = ["obj_slash_uplv", "obj_lightbolt_uplv", "obj_fireball_uplv", "obj_fireshoot_uplv", "obj_shield_uplv", "obj_blackhole_uplv"];

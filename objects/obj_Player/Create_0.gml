@@ -3,20 +3,34 @@ gamepad_set_axis_deadzone(0, 0.2);
 walkSpeed = 1.5;
 global.pause = false;
 global.enemy_limit = 20;
-global.spawn_time = 0;
 
+
+// Global Variables
 global.fireball_lvl = 0;
 global.shield_lvl = 0;
 global.blackhole_lvl = 0;
-global.elapsed_time  = 0;
-global.player_mana = 0;
+global.fireshoot_count = 1;
+global.elapsed_time  = 0; 
+global.player_mana = 0; 
 global.player_max_hp = global.player_hp;
+global.hit_cooldown = false;
+global.spawn_time = 0;
+global.addX_Slash = 40;
+global.armor_equip = "armor1";
+global.boots_equip = "boots1";
+global.book_equip = "book1";
 
-global.fireball_created = 0;
-
+//BOSS
+global.boss1_created = false;
+global.boss2_created = false;
+global.boss3_created = false;
+global.boss4_created = false;
+global.boss5_created = false;
 global.skills_slot = ds_list_create();
+
 if(global.player_class == "acher"){
 	ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_fireshoot));
+	
 	global.pick_slash = false;
 	global.pick_lightbolt = false;
 	global.pick_fireshoot = true;
@@ -41,16 +55,8 @@ if(global.player_class == "acher"){
 	global.pick_blackhole = false;
 }
 
-
-//ready start
-//global.player_hp = 10;
-//global.player_damage = 0;
-//global.xp_bonus = 1;
-
-
 //slash attribute
-//global.alarm_slash = -1;
-global.slash_dmg = global.player_damage*5;
+global.slash_dmg = global.player_damage*7;
 global.slash_img_xs = 1;
 global.slash_img_ys = 1;
 
@@ -61,7 +67,7 @@ global.shield_img_xs = 1;
 global.shield_img_ys = 1;
 
 //fireshoot attribute
-global.fireshoot_dmg = global.player_damage*3;
+global.fireshoot_dmg = global.player_damage*5;
 //global.alarm_fireshoot = -1; //countdown
 
 //lightbolt attribute
@@ -69,14 +75,13 @@ global.lightbolt_dmg = global.player_damage*3;
 
 //blackhole attribute
 global.blackhole_count = 0;
-global.blackhole_dmg = global.player_damage*1;
+global.blackhole_dmg = global.player_damage*2;
 global.alarm_blackhole = -1;
 
 //fireball attribute
 global.fireball_count = 0;
 global.fireball_dmg = global.player_damage*5;
 global.alarm_fireball = -1;
-
 
 //optional weapon
 alarm[0] = global.alarm_slash;
@@ -85,6 +90,7 @@ alarm[2] = global.alarm_blackhole;
 //alarm[3] = global.alarm_fireball;
 alarm[5] = global.alarm_fireshoot;
 alarm[6] = global.alarm_lightbolt;
+alarm[9] = 60;
 
 //collecting soul
 alarm_collection = 20;
@@ -99,13 +105,13 @@ fire_ball_offset_x = 70; // Điểm x tương đối so với obj_Player
 fire_ball_offset_y = 0; // Điểm y tương đối so với obj_Player
 fireball_created = false; // Khởi tạo biến để kiểm tra xem fireball đã được tạo ra hay chưa
 
-//Shield
+//Weapon Created
 shield_created = false;
 
 //Collect Zone
 collect_zone = 50;
 
 //XP system
-xp = 0;
-xpNextLv = 4;
+global.xp = 0;
+global.xpNextLv = 4;
 

@@ -1,8 +1,10 @@
 // Trong sự kiện Draw của đối tượng bạn muốn vẽ lên camera:
 
 // Lấy tọa độ x, y trên viewport để vẽ sprite GUI
-global.gui_x = view_xport[0]; // Thay 20 bằng tọa độ x mong muốn trên viewport
-global.gui_y = view_yport[0]; // Thay 20 bằng tọa độ y mong muốn trên viewport
+global.gui_x = view_xport[0]; 
+global.gui_y = view_yport[0];
+
+
 
 global.drawn_sprites_skills = ds_list_create();
 
@@ -50,6 +52,24 @@ if(global.player_class == "acher"){
 	draw_text(global.gui_x + 75, global.gui_y + 140, weapon_lvl);
 	ds_list_add(global.drawn_sprites_skills, sprite_get_name(s_upgrade_lightbolt));
 }
+
+
+//Draw Equip
+for(var i = 1; i <= 3; i++){
+	var equip1_check = "armor" + string(i);
+	var equip2_check = "boots" + string(i);
+	var equip3_check = "book" + string(i);
+	if(global.armor_equip == equip1_check){
+		draw_sprite(asset_get_index(equip1_check), 0, global.gui_x + 43, global.gui_y + 100);
+	}
+	if(global.boots_equip == equip2_check){
+		draw_sprite(asset_get_index(equip2_check), 0, global.gui_x + 94, global.gui_y + 100);
+	}
+	if(global.book_equip == equip3_check){
+		draw_sprite(asset_get_index(equip3_check), 0, global.gui_x + 144, global.gui_y + 100);
+	}
+}
+
 
 var skill_y = global.gui_y + 194; // Vị trí y ban đầu
 for (var i = 1; i < ds_list_size(global.skills_slot); i++) {
@@ -123,7 +143,7 @@ var xp_bar_height = 15; // Độ cao của thanh XP
 var xp_bar_x = global.gui_x + 96; // Vị trí X của thanh XP
 var xp_bar_y = global.gui_y + 29; // Vị trí Y của thanh XP
 // Tính toán chiều dài của thanh XP dựa trên giá trị xp và xpNextLv
-var xp_percentage = clamp(xp / xpNextLv, 0, 1);
+var xp_percentage = clamp(global.xp / global.xpNextLv, 0, 1);
 var xp_bar_length = xp_percentage * xp_bar_width;
 // Thiết lập màu đen cho phần mất máu
 draw_set_color(#646464);

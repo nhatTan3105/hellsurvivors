@@ -3,7 +3,7 @@
 
 
 event_inherited()
-addX = 40;
+addX = global.addX_Slash;
 
 //attribute
 

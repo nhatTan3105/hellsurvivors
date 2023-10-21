@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.enemy_hp_decrease = true;
-alarm[0] = 30;
+if (global.enemy_hp_decrease_cooldown) {
+    global.enemy_hp_decrease_cooldown = false;
+}
 
 
 
