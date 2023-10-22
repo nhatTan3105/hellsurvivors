@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio_play_sound(menu_select, 10, false);
+audio_play_sound(button_press, 10, false);
 audio_play_sound(level_up, 10, false);
 if(global.armor_equip == "armor1"){
 	global.player_max_hp = global.player_max_hp*1.5;

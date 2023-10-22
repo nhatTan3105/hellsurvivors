@@ -5,7 +5,7 @@ global.pause = false;
 global.enemy_limit = 20;
 
 //Sound
-
+audio_stop_all()
 var themesongplay = audio_stop_sound(themesong);
 // Global Variables
 global.fireball_lvl = 0;

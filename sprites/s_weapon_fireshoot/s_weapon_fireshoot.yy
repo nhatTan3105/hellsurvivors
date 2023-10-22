@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "s_weapom",
-    "path": "folders/Sprites/s_weapom.yy",
+    "name": "s_weapon",
+    "path": "folders/Sprites/s_weapon.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

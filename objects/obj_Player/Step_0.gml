@@ -51,6 +51,7 @@ if (ver != 0){
 	isMoving = true;
 }
 
+
 // Change sprite based on movement
 if (isMoving) {
     // Nếu đang di chuyển, chuyển sprite sang s_player_run

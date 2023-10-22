@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-audio_play_sound(menu_select, 10, false);
+
+audio_play_sound(button_press, 10, false);
+audio_play_sound(game_start, 11, false);
 if(state == "idle"){
 	obj_warrior_select.state = "pop_out";
 	image_blend = c_grey;

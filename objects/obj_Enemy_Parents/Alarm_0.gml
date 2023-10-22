@@ -32,7 +32,7 @@ if(instance_exists(obj_UpLevel0)){
 
 	//level 1 = 120s = 3600 steps;
 	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
-		audio_play_sound(lv1, 1, true);
+		audio_play_sound(lv2, 1, true);
 		instance_create_layer(XX, YY, "Instances_1", obj_Enemey_FlyEye);
 	}
 	if(global.boss1_created == false && global.spawn_time >= 3600){
@@ -42,8 +42,8 @@ if(instance_exists(obj_UpLevel0)){
 	}
 	//level 2 = 120s = 3600 steps;
 	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time >= 3600){
-		audio_stop_sound(lv1)
-		audio_play_sound(lv2, 1, true);
+		audio_stop_sound(lv2)
+		audio_play_sound(lv1, 1, true);
 		instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Goblin);
 	}
 	if(global.boss2_created == false && global.spawn_time >= 7200){
@@ -53,7 +53,7 @@ if(instance_exists(obj_UpLevel0)){
 	}
 	//level 3 = 120s = 3600 steps;
 	if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time >= 7200){
-		audio_stop_sound(lv2)
+		audio_stop_sound(lv1)
 		audio_play_sound(lv3, 1, true);
 		instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Mushroom);
 	}
