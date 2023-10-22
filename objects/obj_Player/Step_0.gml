@@ -1,9 +1,12 @@
 
+//pause game
+
 //Pause game when level up
 if(instance_exists(obj_UpLevel0)){
 	image_speed = 0;
 	exit;
 }
+global.pause_sound = false;
 image_speed = 1;
 
 global.elapsed_time += 1/60;

@@ -3,10 +3,9 @@ gamepad_set_axis_deadzone(0, 0.2);
 walkSpeed = 1.5;
 global.pause = false;
 global.enemy_limit = 20;
-
-//Sound
-audio_stop_all()
 var themesongplay = audio_stop_sound(themesong);
+audio_play_sound(lv1, 1, true);
+
 // Global Variables
 global.fireball_lvl = 0;
 global.shield_lvl = 0;
@@ -21,7 +20,15 @@ global.addX_Slash = 40;
 global.armor_equip = "armor1";
 global.boots_equip = "boots1";
 global.book_equip = "book1";
+
+//Sound
 global.canPlaySound = true;
+global.slash_sound = false;
+global.shield_sound = false;
+global.lightbolt_sound = false;
+global.fireshoot_sound = false;
+global.fireball_sound = false;
+global.blackhole_sound = false;
 
 //BOSS
 global.boss1_created = false;

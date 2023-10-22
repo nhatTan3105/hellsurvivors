@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 142.75919,
+  "duration": 138.73633,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "lv4.mp3",
   "type": 0,
-  "volume": 0.05,
+  "volume": 0.3,
 }

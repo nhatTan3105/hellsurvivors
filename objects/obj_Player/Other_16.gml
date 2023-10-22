@@ -4,6 +4,7 @@ if (instance_exists(obj_UpLevel0)) {
     exit;
 }
 
+
 // Tìm đối tượng kẻ địch gần nhất
 closest_enemy = noone;
 closest_distance = -1;

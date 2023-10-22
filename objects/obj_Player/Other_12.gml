@@ -5,6 +5,7 @@
 if(instance_exists(obj_UpLevel0)){
 	exit;
 }
+
 for(i = 0; i < global.blackhole_count; i++){
 	var randomx = "random_x" + string(i);
 	var randomy = "random_y" + string(i);

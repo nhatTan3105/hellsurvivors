@@ -16,6 +16,7 @@ for (var i = 0; i < _num; ++i) {
     if (enemy.sprite_index == enemy.sprite_none_takehit) {
         // Kiểm tra va chạm chính xác sử dụng Precise Collision Mask
         if (point_in_circle(enemy.x, enemy.y, centerX, centerY, radius)) {
+			
 			if(sprite_index == s_weapon_shield){
 				enemy.hp -= 0;
 	            enemy.sprite_index = enemy.sprite_takehit;
@@ -32,7 +33,7 @@ for (var i = 0; i < _num; ++i) {
 	            enemy.y += lengthdir_y(-10, dir);
 			}else if(sprite_index == s_weapon_slash){
 				if(!global.enemy_hp_decrease_cooldown){
-					audio_play_sound(takehit, 10, false);
+						audio_play_sound(takehit, 10, false);
 						enemy.hp -= dmg;
 						global.enemy_hp_decrease_cooldown = true;
 						alarm[0] = 10;
@@ -46,6 +47,9 @@ for (var i = 0; i < _num; ++i) {
 				if(!global.enemy_hp_decrease_cooldown){
 					if(sprite_index == s_weapon_fireshoot || sprite_index == s_waepon_fireball){
 						audio_play_sound(firehit, 10, false);
+					}
+					if(sprite_index == s_weapon_lightbolt){
+						audio_play_sound(electrichit, 10, false);
 					}
 					
 						audio_play_sound(takehit, 10, false);

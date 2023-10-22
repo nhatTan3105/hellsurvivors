@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.pause = true;
+global.pause_sound = true;
 image_alpha = 0;
 desY = 0;
 

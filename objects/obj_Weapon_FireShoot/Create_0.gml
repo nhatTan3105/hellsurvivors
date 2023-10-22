@@ -6,7 +6,7 @@
 
 // Inherit the parent event
 event_inherited();
-audio_play_sound(fireshoot, 10, false);
+
 image_xscale = 0.6;
 image_yscale = 0.6
 dmg = global.fireshoot_dmg;
