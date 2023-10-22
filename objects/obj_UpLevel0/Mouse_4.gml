@@ -1,6 +1,6 @@
 /// @description left pressed up level
 // You can write your code in this editor
-
+audio_play_sound(menu_select, 10, false);
 if(state == "idle"){
 	obj_UpLevel0.state = "pop_out";
 	image_blend = c_blue;

@@ -4,7 +4,9 @@ walkSpeed = 1.5;
 global.pause = false;
 global.enemy_limit = 20;
 
+//Sound
 
+var themesongplay = audio_stop_sound(themesong);
 // Global Variables
 global.fireball_lvl = 0;
 global.shield_lvl = 0;
@@ -19,6 +21,7 @@ global.addX_Slash = 40;
 global.armor_equip = "armor1";
 global.boots_equip = "boots1";
 global.book_equip = "book1";
+global.canPlaySound = true;
 
 //BOSS
 global.boss1_created = false;

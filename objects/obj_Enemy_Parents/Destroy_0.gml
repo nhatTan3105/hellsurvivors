@@ -5,11 +5,11 @@
 var randomNum = irandom_range(1, 100);
 
 // Nếu randomNum là từ 1 đến 9, tạo obj_Coin
-if (randomNum < 90) {
+if (randomNum < 95) {
     instance_create_layer(x, y, "Instances_1", obj_Coin);
-}else if(randomNum >= 90 && randomNum <=98){
+}else if(randomNum >= 95 && randomNum <=99){
     instance_create_layer(x, y, "Instances_1", obj_Heart);
 }
-else if(randomNum > 98 && randomNum <=100){
+else if(randomNum > 99 && randomNum <=100){
     instance_create_layer(x, y, "Instances_1", obj_Chest);
 }

@@ -8,6 +8,7 @@ state = "pop_up";
 
 getCurve = animcurve_get_channel(a_pop_up, 0);
 percent = 0;
+global.canPlaySound = false;
 
 
 

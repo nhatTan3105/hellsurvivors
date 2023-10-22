@@ -75,7 +75,8 @@ camera_set_view_pos(view_camera[0], x - camera_get_view_width(view_camera[0]) / 
 // Cập nhật tọa độ viewport để theo dõi obj_Player
 view_xview[0] = x - view_wview[0] / 2;
 view_yview[0] = y - view_hview[0] / 2;
-
-
+if(global.pause == true){
+	audio_stop_sound(item_collect)
+}
 
 

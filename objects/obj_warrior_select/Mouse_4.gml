@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+audio_play_sound(menu_select, 10, false);
 if(state == "idle"){
 	obj_warrior_select.state = "pop_out";
 	image_blend = c_grey;
 }
-global.player_hp = 80;
+global.player_hp = 8000;
 global.player_damage = 12;
 global.xp_bonus = 1.4;
 global.sprite_idle = s_warrior_attack;

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+audio_play_sound(menu_select, 10, false);
+audio_play_sound(game_start, 11, false);
 	var vx= camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2);
 	var vy= camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2);
 	

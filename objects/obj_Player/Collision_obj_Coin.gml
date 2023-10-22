@@ -5,6 +5,9 @@
 /// @description Shuffle the elements of an array.
 /// @param {array} array - The array to shuffle.
 /// @returns {array} Shuffled array.
+if (global.canPlaySound) {
+    audio_play_sound(item_collect, 10, false); 
+}
 
 function array_shuffle(array) {
     var n = array_length_1d(array);
@@ -23,8 +26,9 @@ if(instance_exists(obj_UpLevel0)){
 }
 global.xp += 1*global.xp_bonus;
 if(global.xp >= global.xpNextLv){
+	audio_play_sound(level_up, 10, false);
 	global.xp = 0; 
-	global.xpNextLv += global.xpNextLv*0.4;
+	global.xpNextLv += global.xpNextLv*0.5;
 	//xpNextLv = 4;
 	//Draw GUI Up lv
 	

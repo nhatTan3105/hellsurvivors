@@ -32,6 +32,7 @@ for (var i = 0; i < _num; ++i) {
 	            enemy.y += lengthdir_y(-10, dir);
 			}else if(sprite_index == s_weapon_slash){
 				if(!global.enemy_hp_decrease_cooldown){
+					audio_play_sound(firehit, 10, false);
 						enemy.hp -= dmg;
 						global.enemy_hp_decrease_cooldown = true;
 						alarm[0] = 10;
@@ -43,6 +44,7 @@ for (var i = 0; i < _num; ++i) {
 	            enemy.y += lengthdir_y(15, dir);
 			}else{
 				if(!global.enemy_hp_decrease_cooldown){
+						audio_play_sound(firehit, 10, false);
 						enemy.hp -= dmg;
 						global.enemy_hp_decrease_cooldown = true;
 						alarm[0] = 40;
