@@ -33,6 +33,9 @@
     "name": "s_chest_item3",
     "path": "sprites/s_chest_item3/s_chest_item3.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "s_chest_item2",
+    "path": "sprites/s_chest_item2/s_chest_item2.yy",
+  },
   "visible": true,
 }

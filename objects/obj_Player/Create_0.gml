@@ -20,6 +20,7 @@ global.addX_Slash = 40;
 global.armor_equip = "armor1";
 global.boots_equip = "boots1";
 global.book_equip = "book1";
+global.shake_duration = -1;
 
 //Sound
 global.canPlaySound = true;

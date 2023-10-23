@@ -18,10 +18,11 @@ if(global.player_mana <= 10){
 var isMoving = false;
 
 // Get input
-var left = keyboard_check(vk_left);
-var right = keyboard_check(vk_right);
-var up = keyboard_check(vk_up);
-var down = keyboard_check(vk_down);
+var left = keyboard_check(ord("A"));  // Phím A
+var right = keyboard_check(ord("D")); // Phím D
+var up = keyboard_check(ord("W"));    // Phím W
+var down = keyboard_check(ord("S"));  // Phím S
+
 
 var control_press = keyboard_check(vk_control);
 
@@ -82,5 +83,28 @@ view_yview[0] = y - view_hview[0] / 2;
 if(global.pause == true){
 	audio_stop_sound(item_collect)
 }
+
+if (global.shake_duration > 0) {
+    // Giảm thời gian còn lại của hiệu ứng rung màn hình
+    global.shake_duration--;
+
+    // Thay đổi tọa độ x và y của tất cả các đối tượng trên màn hình ngẫu nhiên trong khoảng nhỏ
+    var shake_amount = 5; // Điều chỉnh độ lớn của hiệu ứng rung
+    var shake_x = random_range(-shake_amount, shake_amount);
+    var shake_y = random_range(-shake_amount, shake_amount);
+
+    // Áp dụng hiệu ứng rung cho tất cả các đối tượng
+    var instance_counts = instance_number(obj_Enemy_Parents); // Số lượng đối tượng kẻ địch
+    for (var i = 0; i < instance_counts; i++) {
+        var enemy = instance_find(obj_Enemy_Parents, i);
+        enemy.x += shake_x;
+        enemy.y += shake_y;
+    }
+	
+
+    // Áp dụng hiệu ứng rung cho các đối tượng khác nếu cần thiết
+    // ...
+}
+
 
 

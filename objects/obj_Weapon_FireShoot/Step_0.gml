@@ -17,7 +17,15 @@ if (!instance_exists(obj_UpLevel0)) {
     // Kiểm tra nếu obj_fireshoot ra khỏi viewport thì hủy nó
     if (!point_in_rectangle(x, y, view_xview[0], view_yview[0], view_xview[0] + view_wview[0], view_yview[0] + view_hview[0])) {
         instance_destroy();
+		
+    }else if (place_meeting(x, y, obj_Enemy_Parents)) {
+        var inst = instance_place(x, y, obj_Enemy_Parents);
+        if (inst.object_index != obj_Player) {
+			show_debug_message("hitt")
+            instance_destroy(inst);
+        }
     }
+	
 } else {
     image_speed = 0;
     speed = 0;

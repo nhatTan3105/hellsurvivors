@@ -36,7 +36,7 @@ for (var i = 0; i < _num; ++i) {
 						audio_play_sound(takehit, 10, false);
 						enemy.hp -= dmg;
 						global.enemy_hp_decrease_cooldown = true;
-						alarm[0] = 10;
+						alarm[0] = 5;
 				}
 	            enemy.sprite_index = enemy.sprite_takehit;
 	            // Đẩy enemy lùi khi va chạm
@@ -55,7 +55,7 @@ for (var i = 0; i < _num; ++i) {
 						audio_play_sound(takehit, 10, false);
 						enemy.hp -= dmg;
 						global.enemy_hp_decrease_cooldown = true;
-						alarm[0] = 40;
+						alarm[0] = 20;
 				}
 	            enemy.sprite_index = enemy.sprite_takehit;
 	            // Đẩy enemy lùi khi va chạm

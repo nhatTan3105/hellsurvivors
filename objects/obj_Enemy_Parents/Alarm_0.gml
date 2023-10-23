@@ -30,29 +30,47 @@ if(instance_exists(obj_UpLevel0)){
 	var YYY = obj_Player.y + lengthdir_y(440, dir_2);
 	//skeleton position
 
-		//boss 1
-		if(global.spawn_time < 4800 && global.boss1_created == false){
-			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time < 2400){
+		//lv1
+		if(global.enemy_limit <= 90 && global.boss1_created == false){
+			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 				instance_create_layer(XX, YY, "Instances_1", obj_Enemey_FlyEye);
-			}else if(global.boss1_created == false && global.spawn_time > 2400){
+			}else if(global.boss1_created == false && global.enemy_limit > 80){
 				audio_play_sound(bossspawn, 11, false);
 				instance_create_layer(XX, YY, "Instances_1", obj_Boss1_Executioner);
-				global.boss1_created = true;
-				global.enemy_limit = 20;
+				
 			}
 		}
-		//boss 2
-		if(global.spawn_time < 9600 && global.boss1_created == true){
-			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit && global.spawn_time < 2400){
-				//audio_play_sound(lv2, 1, false);
+		//lv2
+		if(global.enemy_limit <= 100 && global.boss1_created == true){
+			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 				instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Goblin);
-			}else if(global.boss2_created == false && global.spawn_time > 7200){
+			}else if(global.boss2_created == false && global.enemy_limit > 80){
 				audio_play_sound(bossspawn, 11, false);
 				instance_create_layer(XX, YY, "Instances_1", obj_Boss2_Axe);
 				global.boss2_created = true;
-				global.enemy_limit = 20;
 			}
 		}
+		//lv3
+		if(global.enemy_limit <= 150 && global.boss2_created == true){
+			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
+				instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Mushroom);
+			}else if(global.boss3_created == false && global.enemy_limit > 120){
+				audio_play_sound(bossspawn, 11, false);
+				instance_create_layer(XX, YY, "Instances_1", obj_Boss3_Death);
+				global.boss3_created = true;
+			}
+		}
+		//lv4
+		if(global.enemy_limit <= 200 && global.boss3_created == true){
+			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
+				instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Skeleton);
+			}else if(global.boss4_created == false && global.enemy_limit > 170){
+				audio_play_sound(bossspawn, 11, false);
+				instance_create_layer(XX, YY, "Instances_1", obj_Boss4_Demon);
+				global.boss4_created = true;
+			}
+		}
+		
 		
 
 	//move to object player

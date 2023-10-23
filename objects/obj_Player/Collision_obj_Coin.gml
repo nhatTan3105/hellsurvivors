@@ -42,7 +42,7 @@ if(global.xp >= global.xpNextLv){
 	obj_names = array_shuffle(obj_names);
 	// Đếm số lượng đối tượng đã vẽ
 	var drawn_count = 0;
-	var xx = 0; // Khởi tạo giá trị xx
+	var xx = -20; // Khởi tạo giá trị xx
 	var variable_count = 0; // Biến đếm tên biến
 	for (var i = 0; i < 6; i++) {
 	    // Lấy tên đối tượng hiện tại
@@ -80,15 +80,15 @@ if(global.xp >= global.xpNextLv){
 		}
 	    // Kiểm tra nếu level của đối tượng chưa đạt 5 và vẽ đối tượng đó
 	    if (level < 5) {
-	        var sprite_name = "s_upgrade_" + string(obj_name);
+	        var sprite_name = "ss_upgrade_" + string(obj_name);
 			//var obj_index = asset_get_index(obj_name);
-			
+			var vy_add = 10*i;
 			var variable_name = "global.upgrade" + string(variable_count);
 			var obj_uplv_name = "obj_UpLevel" + string(variable_count);
             variable_count += 1;
             variable_global_set(variable_name, instance_create_depth(vx, vy, -2000, asset_get_index(obj_uplv_name)));
             var current_upgrade = variable_global_get(variable_name);
-            current_upgrade.desY = vy - xx;
+            current_upgrade.desY = vy - xx - vy_add;
             current_upgrade.image_alpha = 1;
             current_upgrade.sprite_index = asset_get_index(sprite_name);
 			//show_debug_message(string(sprite_name) + ": " + string(level))

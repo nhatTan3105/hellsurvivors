@@ -7,7 +7,7 @@ if(state == "idle"){
 }
 
 //Slash upgrade
-if(obj_UpLevel1.sprite_index == s_upgrade_slash){
+if(obj_UpLevel1.sprite_index == ss_upgrade_slash){
 		if(global.alarm_slash == -1 ){
 			global.alarm_slash = 60;
 			//up lvl
@@ -34,7 +34,7 @@ if(obj_UpLevel1.sprite_index == s_upgrade_slash){
 	
 }
 //Shield upgrade
-else if(obj_UpLevel1.sprite_index == s_upgrade_shield){
+else if(obj_UpLevel1.sprite_index == ss_upgrade_shield){
 	if(global.alarm_shield == -1){
 		global.alarm_shield = 20;
 		global.shield_lvl = 1;
@@ -55,7 +55,7 @@ else if(obj_UpLevel1.sprite_index == s_upgrade_shield){
 	
 }
 //Fireshoot upgrade
-else if(obj_UpLevel1.sprite_index == s_upgrade_fireshoot){
+else if(obj_UpLevel1.sprite_index == ss_upgrade_fireshoot){
 	if(global.alarm_fireshoot == -1){
 		global.alarm_fireshoot = 40;
 		global.fireshoot_lvl = 1;
@@ -79,7 +79,7 @@ else if(obj_UpLevel1.sprite_index == s_upgrade_fireshoot){
 
 }
 //lightbolt
-else if(obj_UpLevel1.sprite_index == s_upgrade_lightbolt){
+else if(obj_UpLevel1.sprite_index == ss_upgrade_lightbolt){
 	if(global.alarm_lightbolt == -1){
 		global.alarm_lightbolt = 120;
 		global.lightbolt_lvl = 1;
@@ -99,7 +99,7 @@ else if(obj_UpLevel1.sprite_index == s_upgrade_lightbolt){
 	
 }
 //blackhole
-else if(obj_UpLevel1.sprite_index == s_upgrade_blackhole){
+else if(obj_UpLevel1.sprite_index == ss_upgrade_blackhole){
 	if(global.alarm_blackhole== -1){
 		global.alarm_blackhole = 120;
 		global.blackhole_lvl = 1;
@@ -122,7 +122,7 @@ else if(obj_UpLevel1.sprite_index == s_upgrade_blackhole){
 
 }
 //fireball
-else if(obj_UpLevel1.sprite_index == s_upgrade_fireball){
+else if(obj_UpLevel1.sprite_index == ss_upgrade_fireball){
 		if(global.alarm_fireball == -1){
 		global.alarm_fireball = 60
 		global.fireball_lvl = 1;

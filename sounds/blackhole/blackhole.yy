@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "blackhole.mp3",
   "type": 0,
-  "volume": 0.49,
+  "volume": 0.35,
 }
