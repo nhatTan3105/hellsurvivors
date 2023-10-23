@@ -11,7 +11,54 @@ var centerY = y;
 var _list = ds_list_create();
 var _num = instance_number(obj_Enemy_Parents);
 
+
 for (var i = 0; i < _num; ++i) {
+	
+	boss1 = instance_find(obj_Boss1_Executioner, 0);
+	if(instance_exists(boss1)){
+		 if (point_in_circle(boss1.x, boss1.y, centerX, centerY, radius)) {
+			if(boss1.sprite_index == boss1.sprite_none_takehit){
+				boss1.sprite_index = boss1.sprite_takehit;
+				boss1.hp -= dmg;
+			}
+			alarm[2] = 7;
+		 }
+	}
+	boss2 = instance_find(obj_Boss2_Axe, 0);
+	if(instance_exists(boss2)){
+		 if (point_in_circle(boss2.x, boss2.y, centerX, centerY, radius)) {
+			if(boss2.sprite_index == boss2.sprite_none_takehit){
+				boss2.sprite_index = boss2.sprite_takehit;
+				boss2.hp -= dmg;
+			}
+			alarm[2] = 7;
+		 }
+	}
+	boss3 = instance_find(obj_Boss3_Death, 0);
+	if(instance_exists(boss3)){
+		 if (point_in_circle(boss3.x, boss3.y, centerX, centerY, radius)) {
+			if(boss3.sprite_index == boss3.sprite_none_takehit){
+				boss3.sprite_index = boss3.sprite_takehit;
+				boss3.hp -= dmg;
+			}
+			alarm[2] = 7;
+		 }
+	}
+	boss4 = instance_find(obj_Boss4_Demon, 0);
+	if(instance_exists(boss4)){
+		 if (point_in_circle(boss4.x, boss4.y, centerX, centerY, radius)) {
+			if(boss4.sprite_index == boss4.sprite_none_takehit){
+				boss4.sprite_index = boss4.sprite_takehit;
+				boss4.hp -= dmg;
+			}
+			alarm[2] = 7;
+		 }
+	}
+	
+	
+	
+
+		
     enemy = instance_find(obj_Enemy_Parents, i);
     if (enemy.sprite_index == enemy.sprite_none_takehit) {
         // Kiểm tra va chạm chính xác sử dụng Precise Collision Mask
@@ -55,7 +102,7 @@ for (var i = 0; i < _num; ++i) {
 						audio_play_sound(takehit, 10, false);
 						enemy.hp -= dmg;
 						global.enemy_hp_decrease_cooldown = true;
-						alarm[0] = 20;
+						alarm[0] = 10;
 				}
 	            enemy.sprite_index = enemy.sprite_takehit;
 	            // Đẩy enemy lùi khi va chạm

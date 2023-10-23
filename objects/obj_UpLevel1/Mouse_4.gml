@@ -57,7 +57,7 @@ else if(obj_UpLevel1.sprite_index == ss_upgrade_shield){
 //Fireshoot upgrade
 else if(obj_UpLevel1.sprite_index == ss_upgrade_fireshoot){
 	if(global.alarm_fireshoot == -1){
-		global.alarm_fireshoot = 40;
+		global.alarm_fireshoot = 80;
 		global.fireshoot_lvl = 1;
 		obj_Player.alarm[5] = global.alarm_fireshoot;
 		show_debug_message("fireshoot lvl:" + string(global.fireshoot_lvl))
@@ -101,7 +101,7 @@ else if(obj_UpLevel1.sprite_index == ss_upgrade_lightbolt){
 //blackhole
 else if(obj_UpLevel1.sprite_index == ss_upgrade_blackhole){
 	if(global.alarm_blackhole== -1){
-		global.alarm_blackhole = 120;
+		global.alarm_blackhole = 240;
 		global.blackhole_lvl = 1;
 		global.blackhole_count += 1;
 		obj_Player.alarm[2] = global.alarm_blackhole;
@@ -109,8 +109,8 @@ else if(obj_UpLevel1.sprite_index == ss_upgrade_blackhole){
 		global.pick_blackhole = true;
 		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_blackhole));
 	}else{
-		//-30% countdown
-		global.alarm_blackhole -= global.alarm_blackhole*0.3;
+		//-10% countdown
+		global.alarm_blackhole -= global.alarm_blackhole*0.1;
 		//+30% dmg
 		global.blackhole_dmg += global.blackhole_dmg*0.3;
 		global.blackhole_lvl += 1;

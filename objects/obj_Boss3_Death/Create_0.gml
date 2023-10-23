@@ -7,11 +7,10 @@
 
 // Inherit the parent event
 event_inherited();
-global.boss3_created = true;
 walkSpeed = 0.8;
-hp = 10000;
+hp = 7500;
 sprite_none_takehit = s_boss3_death;
-sprite_takehit = s_boss3_death;
+sprite_takehit = s_boss3_death_takehit;
 dmg = 0.07;
 
 alarm[0] = 30;

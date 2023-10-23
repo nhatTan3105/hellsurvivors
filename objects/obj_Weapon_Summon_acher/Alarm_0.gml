@@ -1,7 +1,6 @@
 if (instance_exists(obj_UpLevel0)) {
     exit;
 }
-
 // Lặp qua tất cả các đối tượng kẻ địch
 for (var i = 0; i < 100; i++) {
         var light_bolt = instance_create_layer(x, y, "Instances_1", obj_Weapon_FireShoot);

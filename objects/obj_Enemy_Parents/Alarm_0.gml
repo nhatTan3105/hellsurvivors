@@ -31,12 +31,15 @@ if(instance_exists(obj_UpLevel0)){
 	//skeleton position
 
 		//lv1
-		if(global.enemy_limit <= 90 && global.boss1_created == false){
+		if(global.enemy_limit <= 30 && global.boss1_created == false){
 			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 				instance_create_layer(XX, YY, "Instances_1", obj_Enemey_FlyEye);
-			}else if(global.boss1_created == false && global.enemy_limit > 80){
-				audio_play_sound(bossspawn, 11, false);
-				instance_create_layer(XX, YY, "Instances_1", obj_Boss1_Executioner);
+			}else if(global.boss1_created == false && global.enemy_limit > 25 && global.boss1_exist == false){
+				if(!instance_exists(obj_Boss1_Executioner)){
+					audio_play_sound(bossspawn, 11, false);
+					instance_create_layer(XX, YY, "Instances_1", obj_Boss1_Executioner);
+					 global.boss1_exist = true;
+				}
 				
 			}
 		}
@@ -44,30 +47,36 @@ if(instance_exists(obj_UpLevel0)){
 		if(global.enemy_limit <= 100 && global.boss1_created == true){
 			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 				instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Goblin);
-			}else if(global.boss2_created == false && global.enemy_limit > 80){
-				audio_play_sound(bossspawn, 11, false);
-				instance_create_layer(XX, YY, "Instances_1", obj_Boss2_Axe);
-				global.boss2_created = true;
+			}else if(global.boss2_created == false && global.enemy_limit > 80 &&  global.boss2_exist == false){
+				if(!instance_exists(obj_Boss2_Axe)){
+					audio_play_sound(bossspawn, 11, false);
+					instance_create_layer(XX, YY, "Instances_1", obj_Boss2_Axe);
+					global.boss2_exist = true;
+				}
 			}
 		}
 		//lv3
-		if(global.enemy_limit <= 150 && global.boss2_created == true){
+		if(global.enemy_limit <= 110 && global.boss2_created == true){
 			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 				instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Mushroom);
-			}else if(global.boss3_created == false && global.enemy_limit > 120){
-				audio_play_sound(bossspawn, 11, false);
-				instance_create_layer(XX, YY, "Instances_1", obj_Boss3_Death);
-				global.boss3_created = true;
+			}else if(global.boss3_created == false && global.enemy_limit > 100 && global.boss3_exist == false){
+				if(!instance_exists(obj_Boss3_Death)){
+					audio_play_sound(bossspawn, 11, false);
+					instance_create_layer(XX, YY, "Instances_1", obj_Boss3_Death);
+					global.boss3_exist = true;
+				}
 			}
 		}
 		//lv4
-		if(global.enemy_limit <= 200 && global.boss3_created == true){
+		if(global.enemy_limit <= 120 && global.boss3_created == true){
 			if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 				instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Skeleton);
-			}else if(global.boss4_created == false && global.enemy_limit > 170){
-				audio_play_sound(bossspawn, 11, false);
-				instance_create_layer(XX, YY, "Instances_1", obj_Boss4_Demon);
-				global.boss4_created = true;
+			}else if(global.boss4_created == false && global.enemy_limit > 100 && global.boss4_exist == false){
+				if(!instance_exists(obj_Boss4_Demon)){
+					audio_play_sound(bossspawn, 11, false);
+					instance_create_layer(XX, YY, "Instances_1", obj_Boss4_Demon);
+					global.boss4_exist = true;
+				}
 			}
 		}
 		

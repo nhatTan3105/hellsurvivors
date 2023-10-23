@@ -10,8 +10,8 @@ global.pause_sound = false;
 image_speed = 1;
 
 global.elapsed_time += 1/60;
-if(global.player_mana <= 10){
-	global.player_mana += 1/60;
+if(global.player_mana <= global.player_max_mana){
+	global.player_mana += 1/120;
 }
 
 // Khai báo một biến để lưu trạng thái của nhân vật
@@ -82,6 +82,9 @@ view_xview[0] = x - view_wview[0] / 2;
 view_yview[0] = y - view_hview[0] / 2;
 if(global.pause == true){
 	audio_stop_sound(item_collect)
+}
+if(global.player_hp <= 1){
+	room_goto(room_end);
 }
 
 if (global.shake_duration > 0) {

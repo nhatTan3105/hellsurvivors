@@ -7,11 +7,10 @@
 
 // Inherit the parent event
 event_inherited();
-global.boss2_created = true;
 walkSpeed = 0.7;
-hp = 7000;
+hp = 4500;
 sprite_none_takehit = s_boss2_axe;
-sprite_takehit = s_boss2_axe;
+sprite_takehit = s_boss2_axe_takehit;
 dmg = 0.05;
 
 alarm[0] = 30;

@@ -7,11 +7,10 @@
 
 // Inherit the parent event
 event_inherited();
-global.boss4_created = true;
 walkSpeed = 1;
-hp = 15000;
+hp = 10000;
 sprite_none_takehit = s_boss_demonslime;
-sprite_takehit = s_boss_demonslime;
+sprite_takehit = s_boss_demonslime_takehit;
 dmg = 0.1;
 
 alarm[0] = 30;

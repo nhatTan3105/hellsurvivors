@@ -8,7 +8,7 @@ if(global.player_mana >= 9 && global.player_class =="wizard"){
 		instance_create_depth(x , y, -2005, obj_Weapon_Summon_wizard);
 		obj_Weapon_Summon_wizard.image_xscale = -1;
 	}
-	global.player_mana = 0;
+	global.player_mana -= 9;
 }
 if(global.player_mana >= 9 && global.player_class =="warrior"){
 		if(image_xscale == 1){
@@ -17,7 +17,7 @@ if(global.player_mana >= 9 && global.player_class =="warrior"){
 		instance_create_depth(x, y, -2005, obj_Weapon_Summon_warrior);
 		obj_Weapon_Summon_warrior.image_xscale = -1;
 	}
-	global.player_mana = 0;
+	global.player_mana -= 9;
 }
 if(global.player_mana >= 9 && global.player_class =="acher"){
 		if(image_xscale == 1){
@@ -26,7 +26,7 @@ if(global.player_mana >= 9 && global.player_class =="acher"){
 		instance_create_depth(x , y, -2005, obj_Weapon_Summon_acher);
 		obj_Weapon_Summon_acher.image_xscale = -1;
 	}
-	global.player_mana = 0;
+	global.player_mana -= 9;
 }
 
 

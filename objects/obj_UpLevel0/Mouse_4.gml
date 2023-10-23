@@ -57,7 +57,7 @@ else if(obj_UpLevel0.sprite_index == ss_upgrade_shield){
 //Fireshoot upgrade
 else if(obj_UpLevel0.sprite_index == ss_upgrade_fireshoot){
 	if(global.alarm_fireshoot == -1){
-		global.alarm_fireshoot = 40;
+		global.alarm_fireshoot = 80;
 		global.fireshoot_lvl = 1;
 		global.fireshoot_count += 1;
 		obj_Player.alarm[5] = global.alarm_fireshoot;
@@ -101,7 +101,7 @@ else if(obj_UpLevel0.sprite_index == ss_upgrade_lightbolt){
 //blackhole
 else if(obj_UpLevel0.sprite_index == ss_upgrade_blackhole){
 	if(global.alarm_blackhole== -1){
-		global.alarm_blackhole = 180;
+		global.alarm_blackhole = 240;
 		global.blackhole_lvl = 1;
 		global.blackhole_count += 1;
 		obj_Player.alarm[2] = global.alarm_blackhole;

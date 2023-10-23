@@ -13,6 +13,7 @@ global.blackhole_lvl = 0;
 global.fireshoot_count = 1;
 global.elapsed_time  = 0; 
 global.player_mana = 0; 
+global.player_max_mana = 10; 
 global.player_max_hp = global.player_hp;
 global.hit_cooldown = false;
 global.spawn_time = 0;
@@ -21,6 +22,10 @@ global.armor_equip = "armor1";
 global.boots_equip = "boots1";
 global.book_equip = "book1";
 global.shake_duration = -1;
+global.boss1_exist = false;
+global.boss2_exist = false;
+global.boss3_exist = false;
+global.boss4_exist = false;
 
 //Sound
 global.canPlaySound = true;
