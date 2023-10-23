@@ -1,8 +1,8 @@
-/// @description LV1
+/// @description LV3
 // You can write your code in this editor
 
 //Loop
-alarm[2] = alarm_time_spawn;
+alarm[3] = alarm_time_spawn;
 if(instance_exists(obj_UpLevel0)){
 	image_speed = 0;
 	speed = 0;
@@ -28,20 +28,18 @@ if(instance_exists(obj_UpLevel0)){
 	
 	var XXX = obj_Player.x + lengthdir_x(300, dir_2);
 	var YYY = obj_Player.y + lengthdir_y(300, dir_2);
-	//lv1
-			if(global.enemy_limit <= 60 && global.boss1_created == false && !global.boss1_exist && global.lv1 == false){
+	//lv3
+			if(global.enemy_limit <= 80 ){
 				if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
-					instance_create_layer(XX, YY, "Instances_1", obj_Enemey_FlyEye);
-				}else if(global.boss1_created == false && global.enemy_limit > 55 && global.boss1_exist == false){
-					if(!instance_exists(obj_Boss1_Executioner)){
+					instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Mushroom);
+				}else if(global.boss3_created == false && global.enemy_limit > 75 && global.boss3_exist == false){
+					if(!instance_exists(obj_Boss3_Death)){
 						audio_play_sound(bossspawn, 11, false);
-						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss1_Executioner);
-						 global.boss1_exist = true;
+						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss3_Death);
+						global.boss3_exist = true;
 					}
-				
 				}
 			}
-
 	//move to object player
 	image_speed = 1;
 	direction = point_direction(x, y, obj_Player.x, obj_Player.y);

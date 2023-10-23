@@ -28,7 +28,7 @@ global.xp += 1*global.xp_bonus;
 if(global.xp >= global.xpNextLv){
 	audio_play_sound(level_up, 10, false);
 	global.xp = 0; 
-	global.xpNextLv += global.xpNextLv*1;
+	global.xpNextLv += global.xpNextLv*0.75;
 	//xpNextLv = 4;
 	//Draw GUI Up lv
 	

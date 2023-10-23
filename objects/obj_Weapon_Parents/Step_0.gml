@@ -21,7 +21,7 @@ for (var i = 0; i < _num; ++i) {
 				boss1.sprite_index = boss1.sprite_takehit;
 				boss1.hp -= dmg;
 			}
-			alarm[2] = 7;
+			alarm[2] = 4;
 		 }
 	}
 	boss2 = instance_find(obj_Boss2_Axe, 0);
@@ -31,7 +31,7 @@ for (var i = 0; i < _num; ++i) {
 				boss2.sprite_index = boss2.sprite_takehit;
 				boss2.hp -= dmg;
 			}
-			alarm[2] = 7;
+			alarm[2] = 4;
 		 }
 	}
 	boss3 = instance_find(obj_Boss3_Death, 0);
@@ -41,7 +41,7 @@ for (var i = 0; i < _num; ++i) {
 				boss3.sprite_index = boss3.sprite_takehit;
 				boss3.hp -= dmg;
 			}
-			alarm[2] = 7;
+			alarm[2] = 4;
 		 }
 	}
 	boss4 = instance_find(obj_Boss4_Demon, 0);
@@ -51,7 +51,7 @@ for (var i = 0; i < _num; ++i) {
 				boss4.sprite_index = boss4.sprite_takehit;
 				boss4.hp -= dmg;
 			}
-			alarm[2] = 7;
+			alarm[2] = 4;
 		 }
 	}
 	

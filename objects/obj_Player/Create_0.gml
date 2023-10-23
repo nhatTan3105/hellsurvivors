@@ -26,6 +26,11 @@ global.boss1_exist = false;
 global.boss2_exist = false;
 global.boss3_exist = false;
 global.boss4_exist = false;
+global.lv1 = false;
+global.lv2 = false;
+global.lv3 = false;
+global.lv4 = false;
+global.lv_choose = 1;
 
 //Sound
 global.canPlaySound = true;

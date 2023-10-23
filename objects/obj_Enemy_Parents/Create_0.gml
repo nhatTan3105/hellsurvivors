@@ -2,4 +2,4 @@
 walkSpeed = 0.666
 
 alarm_time_spawn = 30;
-alarm[0] = alarm_time_spawn;
+alarm[1] = alarm_time_spawn;
