@@ -8,6 +8,8 @@ if(instance_exists(obj_UpLevel0)){
 	speed = 0;
 	exit;
 }
+			//audio_play_sound(lv4, 1, true);
+
 //Pause game when level up
 
 	var _vx = camera_get_view_x(view_camera[0]);
@@ -29,10 +31,15 @@ if(instance_exists(obj_UpLevel0)){
 	var XXX = obj_Player.x + lengthdir_x(300, dir_2);
 	var YYY = obj_Player.y + lengthdir_y(300, dir_2);
 	//lv4
-			if(global.enemy_limit <= 100 ){
+			if(global.enemy_limit <= 120 ){
 				if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
+					if(!global.sound_lv4){
+						audio_stop_sound(lv3);
+						audio_play_sound(lv4, 1, true);
+						global.sound_lv4 = true;
+					}
 					instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Skeleton);
-				}else if(global.boss4_created == false && global.enemy_limit > 95 && global.boss4_exist == false){
+				}else if(global.boss4_created == false && global.enemy_limit > 83 && global.boss4_exist == false){
 					if(!instance_exists(obj_Boss4_Demon)){
 						audio_play_sound(bossspawn, 11, false);
 						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss4_Demon);

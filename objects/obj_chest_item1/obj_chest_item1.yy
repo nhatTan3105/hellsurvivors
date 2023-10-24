@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_chest_item2",
-    "path": "sprites/s_chest_item2/s_chest_item2.yy",
+    "name": "s_chest_item1",
+    "path": "sprites/s_chest_item1/s_chest_item1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

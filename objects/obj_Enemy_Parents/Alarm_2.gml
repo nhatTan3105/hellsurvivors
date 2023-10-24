@@ -8,6 +8,8 @@ if(instance_exists(obj_UpLevel0)){
 	speed = 0;
 	exit;
 }
+			//audio_play_sound(lv2, 1, true);
+
 //Pause game when level up
 
 	var _vx = camera_get_view_x(view_camera[0]);
@@ -29,10 +31,15 @@ if(instance_exists(obj_UpLevel0)){
 	var XXX = obj_Player.x + lengthdir_x(300, dir_2);
 	var YYY = obj_Player.y + lengthdir_y(300, dir_2);
 	//lv2
-			if(global.enemy_limit <= 70 && global.boss1_created == true && global.lv2 == true){
+			if(global.enemy_limit <= 120 && global.boss1_created == true && global.lv2 == true){
+				if(!global.sound_lv2){
+					audio_stop_sound(lv1);
+					audio_play_sound(lv2, 1, true);
+					global.sound_lv2 = true;
+				}
 				if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 					instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Goblin);
-				}else if(global.boss2_created == false && global.enemy_limit > 65 &&  global.boss2_exist == false){
+				}else if(global.boss2_created == false && global.enemy_limit > 81 &&  global.boss2_exist == false){
 					if(!instance_exists(obj_Boss2_Axe)){
 						audio_play_sound(bossspawn, 11, false);
 						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss2_Axe);

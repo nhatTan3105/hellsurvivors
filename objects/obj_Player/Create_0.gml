@@ -4,7 +4,7 @@ walkSpeed = 1.5;
 global.pause = false;
 global.enemy_limit = 20;
 var themesongplay = audio_stop_sound(themesong);
-audio_play_sound(lv1, 1, true);
+
 
 // Global Variables
 global.fireball_lvl = 0;
@@ -26,11 +26,16 @@ global.boss1_exist = false;
 global.boss2_exist = false;
 global.boss3_exist = false;
 global.boss4_exist = false;
+global.lv = 1;
 global.lv1 = false;
 global.lv2 = false;
 global.lv3 = false;
 global.lv4 = false;
 global.lv_choose = 1;
+global.sound_lv1 = false;
+global.sound_lv2 = false;
+global.sound_lv3 = false;
+global.sound_lv4 = false;
 
 //Sound
 global.canPlaySound = true;
@@ -77,7 +82,7 @@ if(global.player_class == "acher"){
 }
 
 //slash attribute
-global.slash_dmg = global.player_damage*7;
+global.slash_dmg = global.player_damage*10;
 global.slash_img_xs = 1;
 global.slash_img_ys = 1;
 
@@ -88,7 +93,7 @@ global.shield_img_xs = 1;
 global.shield_img_ys = 1;
 
 //fireshoot attribute
-global.fireshoot_dmg = global.player_damage*5;
+global.fireshoot_dmg = global.player_damage*0.7;
 //global.alarm_fireshoot = -1; //countdown
 
 //lightbolt attribute
@@ -101,7 +106,7 @@ global.alarm_blackhole = -1;
 
 //fireball attribute
 global.fireball_count = 0;
-global.fireball_dmg = global.player_damage*5;
+global.fireball_dmg = global.player_damage;
 global.alarm_fireball = -1;
 
 //optional weapon
@@ -130,7 +135,7 @@ fireball_created = false; // Khởi tạo biến để kiểm tra xem fireball �
 shield_created = false;
 
 //Collect Zone
-collect_zone = 50;
+global.collect_zone = 50;
 
 //XP system
 global.xp = 0;

@@ -28,13 +28,21 @@ global.xp += 1*global.xp_bonus;
 if(global.xp >= global.xpNextLv){
 	audio_play_sound(level_up, 10, false);
 	global.xp = 0; 
-	global.xpNextLv += global.xpNextLv*0.75;
+	if(global.lv<3){
+		global.xpNextLv += global.xpNextLv;
+	}else if(global.lv<10){
+		global.xpNextLv += global.xpNextLv*0.4;
+	}else if(global.lv < 15){
+		global.xpNextLv += global.xpNextLv*0.3;
+	}else{
+		global.xpNextLv = global.xpNextLv*0.2;
+	}
 	//xpNextLv = 4;
 	//Draw GUI Up lv
-	
+	if(global.lv < 30){
 	var vx= camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0])/2);
 	var vy= camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0])/2);
-	instance_create_depth(vx - 100, vy - 140, -1000, obj_UpLevelGUI); // Tạo và vẽ đối tượng obj_levelup_gui phía dưới các s_upgrade
+	//instance_create_depth(vx - 100, vy - 140, -1000, obj_UpLevelGUI); // Tạo và vẽ đối tượng obj_levelup_gui phía dưới các s_upgrade
 	// Định danh của các đối tượng cần vẽ
 	var obj_names = ["slash", "lightbolt", "fireball", "fireshoot", "shield", "blackhole"];
 	//var obj_names = ["obj_slash_uplv", "obj_lightbolt_uplv", "obj_fireball_uplv", "obj_fireshoot_uplv", "obj_shield_uplv", "obj_blackhole_uplv"];
@@ -45,6 +53,7 @@ if(global.xp >= global.xpNextLv){
 	var xx = -20; // Khởi tạo giá trị xx
 	var variable_count = 0; // Biến đếm tên biến
 	for (var i = 0; i < 6; i++) {
+		instance_create_depth(vx - 100, vy - 140, -1000, obj_UpLevelGUI);
 	    // Lấy tên đối tượng hiện tại
 	    var obj_name = obj_names[i];
 	    // Kiểm tra level của đối tượng hiện tại
@@ -100,6 +109,8 @@ if(global.xp >= global.xpNextLv){
 	        break;
 	    }
 	}
+	}
+	global.lv+=1;
 }
 instance_destroy(other.id)	
 

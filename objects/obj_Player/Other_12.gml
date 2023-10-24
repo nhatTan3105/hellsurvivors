@@ -7,6 +7,7 @@ if(instance_exists(obj_UpLevel0)){
 }
 
 for(i = 0; i < global.blackhole_count; i++){
+	audio_play_sound(blackhole, 1, false)
 	var randomx = "random_x" + string(i);
 	var randomy = "random_y" + string(i);
 	var randomx = random_range(-200, 200);

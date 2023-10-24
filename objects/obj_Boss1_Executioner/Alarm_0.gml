@@ -3,7 +3,7 @@
 
 event_inherited();
 //Loop
-alarm[0] = 30;
+alarm[0] = 10;
 if(instance_exists(obj_UpLevel0)){
 	image_speed = 0;
 	speed = 0;
@@ -20,6 +20,9 @@ if(instance_exists(obj_UpLevel0)){
 		image_xscale = -1;
 	}
 	depth = -y;
+	if(sprite_index == sprite_takehit){
+		sprite_index = sprite_none_takehit;
+	}
 
 
 

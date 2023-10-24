@@ -11,11 +11,17 @@ image_speed = 1;
 
 global.elapsed_time += 1/60;
 if(global.player_mana <= global.player_max_mana){
-	global.player_mana += 1/120;
+	global.player_mana += 1/240;
 }
 
-// Khai báo một biến để lưu trạng thái của nhân vật
-var isMoving = false;
+// Điều này sẽ lưu trữ kích thước của viewport
+var view_width = display_get_width();
+var view_height = display_get_height();
+
+// Đây là phần quan trọng, di chuyển room dựa trên vị trí của nhân vật
+var room_x = view_xview[0];
+var room_y = view_yview[0];
+
 
 // Get input
 var left = keyboard_check(ord("A"));  // Phím A
@@ -24,7 +30,6 @@ var up = keyboard_check(ord("W"));    // Phím W
 var down = keyboard_check(ord("S"));  // Phím S
 
 
-var control_press = keyboard_check(vk_control);
 
 // Movement, Combined
 var hor = (right - left);
@@ -39,7 +44,7 @@ if (gamepad_axis_value(0, gp_axislh) != 0 or gamepad_axis_value(0, gp_axislv) !=
 // Apply movement
 x += hor * walkSpeed;
 y += ver * walkSpeed;
-
+var isMoving = false;
 // Change direction of sprite
 if (hor > 0) {
     image_xscale = 1;
@@ -52,9 +57,12 @@ if (hor > 0) {
 }
 
 if (ver != 0){
-	isMoving = true;
+    isMoving = true;
 }
 
+
+
+//room_set_viewport(room_x, room_y, view_wview[0], view_hview[0], 0, 0);
 
 // Change sprite based on movement
 if (isMoving) {
@@ -111,3 +119,4 @@ if (global.shake_duration > 0) {
 
 
 
+//endless map

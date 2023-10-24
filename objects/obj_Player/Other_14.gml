@@ -6,7 +6,7 @@ if(instance_exists(obj_UpLevel0)){
 	exit;
 }
 var _list = ds_list_create();
-var _num = collision_circle_list(obj_Player.x, obj_Player.y, obj_Player.collect_zone, obj_Coin, false, true, _list, false);
+var _num = collision_circle_list(obj_Player.x, obj_Player.y, global.collect_zone, obj_Coin, false, true, _list, false);
 if (_num > 0)
 {
     for (var i = 0; i < _num; ++i;)
@@ -15,7 +15,7 @@ if (_num > 0)
     }
 }
 var _list1 = ds_list_create();
-var _num1 = collision_circle_list(obj_Player.x, obj_Player.y, obj_Player.collect_zone, obj_Heart, false, true, _list1, false);
+var _num1 = collision_circle_list(obj_Player.x, obj_Player.y, global.collect_zone, obj_Heart, false, true, _list1, false);
 if (_num1 > 0)
 {
     for (var i = 0; i < _num1; ++i;)

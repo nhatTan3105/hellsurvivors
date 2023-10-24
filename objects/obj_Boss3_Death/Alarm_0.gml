@@ -20,6 +20,9 @@ if(instance_exists(obj_UpLevel0)){
 		image_xscale = 1;
 	}
 	depth = -y;
-
+	if(sprite_index == sprite_takehit){
+		sprite_index = sprite_none_takehit;
+	}
+alarm[1] = 1;
 
 

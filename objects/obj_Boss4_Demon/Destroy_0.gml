@@ -11,5 +11,6 @@ global.boss4_created = true;
 
 instance_create_layer(x, y, "Instances_1", obj_Chest);
 instance_destroy(obj_Enemy_Skeleton);
+global.collect_zone = 500;
 room_goto(room_win)
 

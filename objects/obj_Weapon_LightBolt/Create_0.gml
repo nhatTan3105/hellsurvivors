@@ -12,3 +12,4 @@ image_yscale = 0.8;
 light_bolt_time = 40;
 alarm[0] = light_bolt_time;
 dmg = global.lightbolt_dmg;
+audio_play_sound(electrichit, 10, false);

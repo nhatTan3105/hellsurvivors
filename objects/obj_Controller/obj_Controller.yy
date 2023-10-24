@@ -34,5 +34,5 @@
     "path": "sprites/s_controller/s_controller.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

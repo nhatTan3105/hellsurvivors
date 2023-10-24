@@ -88,7 +88,7 @@ else if(obj_UpLevel0.sprite_index == ss_upgrade_lightbolt){
 		global.pick_lightbolt = true;
 		ds_list_add(global.skills_slot, sprite_get_name(s_upgrade_lightbolt));
 	}else{
-	//-30% countdown
+	//-30% coolwn
 	global.alarm_lightbolt -= global.alarm_lightbolt*0.3;
 	//+30% dmg
 	global.lightbolt_dmg += global.lightbolt_dmg*0.3;

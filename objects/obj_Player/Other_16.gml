@@ -8,7 +8,12 @@ if (instance_exists(obj_UpLevel0)) {
 // Tìm đối tượng kẻ địch gần nhất
 closest_enemy = noone;
 closest_distance = -1;
-
+var boss1 = instance_find(obj_Boss1_Executioner, 0)
+	if(instance_exists(boss1)){
+		for(var i = 0; i < instance_number(obj_Boss1_Executioner); i++){
+			var light_bolt1 = instance_create_layer(boss1.x, boss1.y, "Instances_1", obj_Weapon_LightBolt);
+		}
+	}
 var num_enemies = instance_number(obj_Enemy_Parents);
 for (var i = 0; i < num_enemies; i++) {
     var enemy = instance_find(obj_Enemy_Parents, i);
@@ -18,6 +23,8 @@ for (var i = 0; i < num_enemies; i++) {
         closest_distance = distance_to_player;
         closest_enemy = enemy;
     }
+	
+	
 }
 
 // Gán đối tượng kẻ địch gần nhất cho obj_fireshoot và tạo obj_fireshoot tại vị trí của enemy
@@ -36,4 +43,5 @@ if (closest_enemy != noone) {
         var light_bolt = instance_create_layer(light_bolt_x, light_bolt_y, "Instances_1", obj_Weapon_LightBolt);
         light_bolt.depth = closest_enemy.depth - 1;
     }
+	
 }

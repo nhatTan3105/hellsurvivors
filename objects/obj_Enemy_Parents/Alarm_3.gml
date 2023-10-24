@@ -8,6 +8,8 @@ if(instance_exists(obj_UpLevel0)){
 	speed = 0;
 	exit;
 }
+			//audio_play_sound(lv3, 1, true);
+
 //Pause game when level up
 
 	var _vx = camera_get_view_x(view_camera[0]);
@@ -29,10 +31,15 @@ if(instance_exists(obj_UpLevel0)){
 	var XXX = obj_Player.x + lengthdir_x(300, dir_2);
 	var YYY = obj_Player.y + lengthdir_y(300, dir_2);
 	//lv3
-			if(global.enemy_limit <= 80 ){
+			if(global.enemy_limit <= 120 ){
 				if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
+					if(!global.sound_lv3){
+						audio_stop_sound(lv2);
+						audio_play_sound(lv3, 1, true);
+						global.sound_lv3 = true;
+					}
 					instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Mushroom);
-				}else if(global.boss3_created == false && global.enemy_limit > 75 && global.boss3_exist == false){
+				}else if(global.boss3_created == false && global.enemy_limit > 82 && global.boss3_exist == false){
 					if(!instance_exists(obj_Boss3_Death)){
 						audio_play_sound(bossspawn, 11, false);
 						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss3_Death);

@@ -29,4 +29,5 @@ global.boss1_created = true;
 global.lv1 = true;
 global.lv2 = true;
 global.lv_choose = 2;
+global.collect_zone = 500;
 

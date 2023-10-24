@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "s_chest_item3",
-  "bbox_bottom": 71,
+  "bbox_bottom": 74,
   "bbox_left": 0,
-  "bbox_right": 71,
+  "bbox_right": 74,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"be40a7b2-c2bd-4351-b9ab-552d50fc44fc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9774ec5a-a6ae-4dfb-a237-0532b5f8c8e0",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 72,
+  "height": 75,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"acbb2ab3-9117-4319-87dd-8278b5377a12","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b0816418-dc27-4c83-8f27-06afd724b0de","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"be40a7b2-c2bd-4351-b9ab-552d50fc44fc","path":"sprites/s_chest_item3/s_chest_item3.yy",},},},"Disabled":false,"id":"125bdc9f-8504-453e-b3a7-effa16438070","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9774ec5a-a6ae-4dfb-a237-0532b5f8c8e0","path":"sprites/s_chest_item3/s_chest_item3.yy",},},},"Disabled":false,"id":"ca53c6a2-b43b-42ed-9b05-a96d2890e4cb","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 72,
+  "width": 75,
 }

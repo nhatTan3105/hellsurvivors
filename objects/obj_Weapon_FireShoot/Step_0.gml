@@ -21,7 +21,6 @@ if (!instance_exists(obj_UpLevel0)) {
     }else if (place_meeting(x, y, obj_Enemy_Parents)) {
         var inst = instance_place(x, y, obj_Enemy_Parents);
         if (inst.object_index != obj_Player) {
-			show_debug_message("hitt")
             instance_destroy(inst);
         }
     }

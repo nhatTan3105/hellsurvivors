@@ -25,3 +25,4 @@ instance_create_layer(x+180, y-190, "Instances_1", obj_Enemy_Mushroom);
 instance_create_layer(x-190, y-180, "Instances_1", obj_Enemy_Mushroom);
 global.lv3 = true
 global.lv_choose = 3;
+global.collect_zone = 500;
