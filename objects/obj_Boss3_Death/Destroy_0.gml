@@ -26,3 +26,5 @@ instance_create_layer(x-170, y+180, "Instances_1", obj_Enemy_Skeleton);
 instance_create_layer(x+180, y-190, "Instances_1", obj_Enemy_Skeleton);
 global.lv4 = true
 global.lv_choose = 4;
+audio_stop_sound(boss3_gru);
+audio_play_sound(boss_dead, 30, false);

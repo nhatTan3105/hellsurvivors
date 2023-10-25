@@ -30,4 +30,6 @@ global.lv1 = true;
 global.lv2 = true;
 global.lv_choose = 2;
 global.collect_zone = 500;
+audio_stop_sound(boss1_gru);
+audio_play_sound(boss_dead, 30, false);
 

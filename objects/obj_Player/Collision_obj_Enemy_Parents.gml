@@ -16,6 +16,7 @@ if(global.player_hp <= 0){
 			audio_play_sound(uh_warrior, 1, false);
 		}
 	    global.hit_cooldown = true;
+		instance_destroy(other.id);
 	    alarm[10] = 25; // Thiết lập hẹn giờ để tắt hit_cooldown sau 60 step
 	}
 	

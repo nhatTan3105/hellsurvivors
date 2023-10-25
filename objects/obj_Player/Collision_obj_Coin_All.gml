@@ -13,7 +13,7 @@ if (global.canPlaySound) {
 if(instance_exists(obj_UpLevel0)){
 	exit;
 }
-alarm[8] = 120;
+alarm[8] = 1;
 instance_destroy(other.id)	
 
 

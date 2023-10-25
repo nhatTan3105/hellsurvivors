@@ -154,7 +154,7 @@ draw_rectangle(xp_bar_x, xp_bar_y, xp_bar_x + xp_bar_length, xp_bar_y + xp_bar_h
 // Đặt lại màu về mặc định (trắng) nếu bạn cần vẽ các đối tượng khác với màu mặc định
 draw_set_color(c_white);
 
-
+//Draw Mana
 // Định dạng thanh Mana
 var mana_bar_width = 130; // Độ rộng của thanh Mana
 var mana_bar_height = 15; // Độ cao của thanh Mana
@@ -162,7 +162,7 @@ var mana_bar_x = global.gui_x + 96; // Vị trí X của thanh Mana
 var mana_bar_y = global.gui_y + 51; // Vị trí Y của thanh Mana
 
 // Tính toán chiều dài của thanh Mana dựa trên giá trị mana và giá trị tối đa của mana (10)
-var mana_percentage = clamp(global.player_mana / 10, 0, 1);
+var mana_percentage = clamp(global.player_mana / global.player_max_mana, 0, 1);
 var mana_bar_length = mana_percentage * mana_bar_width;
 
 // Thiết lập màu đen cho phần mất máu
@@ -174,8 +174,10 @@ draw_set_color(#0065A6);
 draw_rectangle(mana_bar_x, mana_bar_y, mana_bar_x + mana_bar_length, mana_bar_y + mana_bar_height, false);
 
 // Đặt lại màu về mặc định (trắng) nếu bạn cần vẽ các đối tượng khác với màu mặc định
+draw_set_color(#EFEF0B);
+var level = "Level: "+string(global.lv);
+draw_text(global.gui_x + 300, global.gui_y + 51, level)
 draw_set_color(c_white);
-
 
 
 

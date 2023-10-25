@@ -28,14 +28,14 @@ global.xp += 1*global.xp_bonus;
 if(global.xp >= global.xpNextLv){
 	audio_play_sound(level_up, 10, false);
 	global.xp = 0; 
-	if(global.lv<3){
+	if(global.lv<5){
 		global.xpNextLv += global.xpNextLv;
 	}else if(global.lv<10){
-		global.xpNextLv += global.xpNextLv*0.4;
+		global.xpNextLv += global.xpNextLv*0.2;
 	}else if(global.lv < 15){
-		global.xpNextLv += global.xpNextLv*0.3;
+		global.xpNextLv += global.xpNextLv*0.07;
 	}else{
-		global.xpNextLv = global.xpNextLv*0.2;
+		global.xpNextLv = global.xpNextLv;
 	}
 	//xpNextLv = 4;
 	//Draw GUI Up lv

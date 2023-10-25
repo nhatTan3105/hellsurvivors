@@ -12,22 +12,22 @@ instance_destroy(obj_Weapon_FireBall)
 var radius = 50;
 switch (global.fireball_count) {
 	    case 1:
-	        radius = 50;
+	        radius = 35;
 	        break;
 	    case 2:
-	        radius = 70;
+	        radius = 45;
 	        break;
 	    case 3:
-	        radius = 90;
+	        radius = 55;
 	        break;
 	    case 4:
-	        radius = 110;
+	        radius = 65;
 	        break;
 	    case 5:
-	        radius = 130;
+	        radius = 95;
 	        break;
 	    default:
-	        radius = 50; // Giá trị mặc định nếu global.fireball_count không nằm trong các trường hợp trên
+	        radius = 35; // Giá trị mặc định nếu global.fireball_count không nằm trong các trường hợp trên
 	}
 var angle_increment = 360 / global.fireball_count; // Góc giữa mỗi fireball
 // Xác định vị trí ban đầu của fireball
