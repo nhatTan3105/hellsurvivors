@@ -31,9 +31,9 @@ if(global.xp >= global.xpNextLv){
 	if(global.lv<5){
 		global.xpNextLv += global.xpNextLv;
 	}else if(global.lv<10){
-		global.xpNextLv += global.xpNextLv*0.2;
+		global.xpNextLv += global.xpNextLv*0.4;
 	}else if(global.lv < 15){
-		global.xpNextLv += global.xpNextLv*0.07;
+		global.xpNextLv += global.xpNextLv*0.1;
 	}else{
 		global.xpNextLv = global.xpNextLv;
 	}

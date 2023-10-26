@@ -21,9 +21,11 @@ for (var i = 0; i < num_enemies; i++) {
     }
 }
 
-instance_create_layer(x+150, y+150, "Instances_1", obj_Enemy_Goblin);
-instance_create_layer(x+179, y-160, "Instances_1", obj_Enemy_Goblin);
-instance_create_layer(x-157, y+180, "Instances_1", obj_Enemy_Goblin);
+//instance_create_layer(x+150, y+150, "Instances_1", obj_Enemy_Goblin);
+//instance_create_layer(x+179, y-160, "Instances_1", obj_Enemy_Goblin);
+//instance_create_layer(x-157, y+180, "Instances_1", obj_Enemy_Goblin);
+
+instance_create_layer(x, y, "Instances_1", obj_Teleport);
 global.enemy_limit = 20;
 global.boss1_created = true;
 global.lv1 = true;

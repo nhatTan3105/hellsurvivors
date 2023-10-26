@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "w3.mp3",
   "type": 0,
-  "volume": 0.66,
+  "volume": 0.3,
 }

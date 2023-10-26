@@ -1,50 +1,39 @@
-// Lấy đối tượng người chơi
-var player = instance_find(obj_Player, 0);
+// Trong sự kiện Step của Wukong
+var player = instance_nearest(x, y, obj_Player);
 
-// Tìm đối tượng Enemy gần nhất
-var nearest_enemy = instance_nearest(x, y, obj_Enemy_Parents);
-
-// Kiểm tra xem người chơi và Enemy có tồn tại không
-if (instance_exists(player) && instance_exists(nearest_enemy)) {
-    // Tính toán hướng và khoảng cách giữa wukong và người chơi
-    var direction_to_player = point_direction(x, y, player.x, player.y);
-    var distance_to_player = point_distance(x, y, player.x, player.y);
-
-    // Tính toán hướng và khoảng cách giữa wukong và Enemy gần nhất
-    var direction_to_enemy = point_direction(x, y, nearest_enemy.x, nearest_enemy.y);
-    var distance_to_enemy = point_distance(x, y, nearest_enemy.x, nearest_enemy.y);
-
-    // Xác định hướng và xoay sprite
-    image_xscale = sign(player.x - x) * 0.7;
-
-    // Kiểm tra khoảng cách giữa wukong và người chơi
-    if (distance_to_player > 600) {
-        // Di chuyển wukong gần người chơi nếu cách xa hơn 400 pixel
-        var move_speed = 1; // Tốc độ di chuyển của wukong
-        x += lengthdir_x(move_speed, direction_to_player);
-        y += lengthdir_y(move_speed, direction_to_player);
+if (instance_exists(player)) {
+    // Kiểm tra xem người chơi có dịch chuyển không
+    if (player_x_prev != player.x || player_y_prev != player.y) {
+        // Người chơi đã di chuyển, Wukong sẽ theo sau
+        should_follow = true;
         
-        // Thay đổi sprite khi wukong di chuyển
+        // Xác định hướng di chuyển
+        var move_direction = point_direction(player_x_prev, player_y_prev, player.x, player.y);
+        
+        // Thay đổi hướng của sprite dựa trên hướng di chuyển
+        if (move_direction < 90 || move_direction > 270) {
+            image_xscale = 0.7; // Di chuyển về bên phải
+        } else {
+            image_xscale = -0.7; // Di chuyển về bên trái
+        }
+    }
+    
+    // Lưu trữ vị trí người chơi để kiểm tra ở lần Step tiếp theo
+    player_x_prev = player.x;
+    player_y_prev = player.y;
+    
+    // Kiểm tra xem Wukong có nên di chuyển không
+    if (should_follow && point_distance(x, y, player.x - 50, player.y) > 50) {
+        // Di chuyển Wukong đến sau lưng người chơi
+        direction = point_direction(x, y, player.x - 50, player.y);
+        x += lengthdir_x(1, direction);
+        y += lengthdir_y(1, direction);
         sprite_index = s_wukong_run;
-    } else if (distance_to_enemy > 50) {
-        // Di chuyển wukong tới vị trí của Enemy nếu cách xa hơn 50 pixel
-        var move_speed = 1; // Tốc độ di chuyển của wukong
-        x += lengthdir_x(move_speed, direction_to_enemy);
-        y += lengthdir_y(move_speed, direction_to_enemy);
-        
-        // Thay đổi sprite khi wukong di chuyển gần Enemy
-        sprite_index = s_wukong_run;
-        
-        // Xoay mặt về hướng của Enemy
-        image_xscale = sign(nearest_enemy.x - x) * 0.7;
     } else {
-        // Đứng yên nếu gần người chơi hoặc gần Enemy
+        // Dừng Wukong nếu đủ gần sau lưng người chơi hoặc người chơi dừng lại
         sprite_index = s_wukong_attack;
     }
 } else {
-    // Người chơi hoặc Enemy không
-	// Người chơi hoặc Enemy không tồn tại, tạm ẩn wukong
-        visible = false;
-    }
-
-
+    // Người chơi không tồn tại, tạm ẩn Wukong
+    visible = false;
+}

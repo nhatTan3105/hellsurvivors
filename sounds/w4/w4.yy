@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 45.609795,
+  "duration": 2.533878,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "w4.mp3",
   "type": 0,
-  "volume": 0.66,
+  "volume": 0.3,
 }

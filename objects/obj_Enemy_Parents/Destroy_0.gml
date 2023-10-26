@@ -17,3 +17,4 @@ else if(randomNum > 399 && randomNum <=400){
 		instance_create_layer(x, y, "Instances_1", obj_Chest);
 	}
 }
+global.enemy_dead += 1;

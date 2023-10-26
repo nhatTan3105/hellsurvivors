@@ -178,6 +178,8 @@ draw_set_color(#EFEF0B);
 var level = "Level: "+string(global.lv);
 draw_text(global.gui_x + 300, global.gui_y + 51, level)
 draw_set_color(c_white);
+var count_enemy_destroy = "Enemies destroyed: "+string(global.enemy_dead);
+draw_text(global.gui_x + 1150, global.gui_y + 20, count_enemy_destroy)
 
 
 

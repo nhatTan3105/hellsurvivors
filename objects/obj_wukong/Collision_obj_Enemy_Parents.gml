@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-alarm[5] = 90;
+instance_destroy(other.id)
 
 

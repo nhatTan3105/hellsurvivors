@@ -4,7 +4,7 @@ walkSpeed = 1.5;
 global.pause = false;
 global.enemy_limit = 20;
 var themesongplay = audio_stop_sound(themesong);
-
+global.enemy_dead = 0;
 
 // Global Variables
 global.fireball_lvl = 0;
