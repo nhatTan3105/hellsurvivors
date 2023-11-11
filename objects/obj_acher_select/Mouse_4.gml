@@ -19,6 +19,6 @@ global.fireshoot_lvl = 1;
 global.alarm_slash = -1;
 global.alarm_lightbolt = -1;
 global.player_class = "acher";
-room_goto(room_main2);
+room_goto(room_main);
 
 

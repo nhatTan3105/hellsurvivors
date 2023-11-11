@@ -39,7 +39,7 @@ if(instance_exists(obj_UpLevel0)){
 						global.sound_lv4 = true;
 					}
 					instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Skeleton);
-				}else if(global.boss4_created == false && global.enemy_limit > 83 && global.boss4_exist == false){
+				}else if(global.boss4_created == false && global.enemy_limit > 60 && global.boss4_exist == false){
 					if(!instance_exists(obj_Boss4_Demon)){
 						audio_play_sound(bossspawn, 11, false);
 						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss4_Demon);

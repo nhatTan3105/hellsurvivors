@@ -17,11 +17,11 @@
   "option_operagx_mod_team_id": "09ef94b0-661c-45dd-8bc7-1b22e273216b",
   "option_operagx_mod_team_name": "nhattan3105 studio",
   "option_operagx_mod_version": "1.0.0",
-  "option_operagx_next_version": "1.0.0.18",
+  "option_operagx_next_version": "1.0.0.19",
   "option_operagx_publicShareUrl": "https://gx.games/games/i2ougj/hell-survivors-by-nhattan3105/",
   "option_operagx_scale": 0,
   "option_operagx_team_id": "09ef94b0-661c-45dd-8bc7-1b22e273216b",
   "option_operagx_team_name": "nhattan3105 studio",
   "option_operagx_texture_page": "2048x2048",
-  "option_operagx_version": "1.0.0.17",
+  "option_operagx_version": "1.0.0.18",
 }

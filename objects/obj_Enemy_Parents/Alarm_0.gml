@@ -38,7 +38,8 @@ if(instance_exists(obj_UpLevel0)){
 				}
 				if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 					instance_create_layer(XX, YY, "Instances_1", obj_Enemey_FlyEye);
-				}else if(global.boss1_created == false && global.enemy_limit > 80 && global.boss1_exist == false){
+				}
+				if(global.boss1_created == false && global.enemy_limit > 60 && global.boss1_exist == false){
 					if(!instance_exists(obj_Boss1_Executioner)){
 						audio_play_sound(bossspawn, 11, false);
 						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss1_Executioner);

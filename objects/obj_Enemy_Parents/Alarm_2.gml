@@ -39,7 +39,7 @@ if(instance_exists(obj_UpLevel0)){
 				}
 				if(instance_number(obj_Enemy_Parents) <= global.enemy_limit){
 					instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Goblin);
-				}else if(global.boss2_created == false && global.enemy_limit > 81 &&  global.boss2_exist == false){
+				}else if(global.boss2_created == false && global.enemy_limit > 60 &&  global.boss2_exist == false){
 					if(!instance_exists(obj_Boss2_Axe)){
 						audio_play_sound(bossspawn, 11, false);
 						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss2_Axe);
