@@ -26,3 +26,5 @@ instance_create_layer(x-190, y-180, "Instances_1", obj_Enemy_Mushroom);
 global.lv3 = true
 global.lv_choose = 3;
 global.collect_zone = 500;
+audio_stop_sound(boss2_gru);
+audio_play_sound(boss_dead, 30, false);

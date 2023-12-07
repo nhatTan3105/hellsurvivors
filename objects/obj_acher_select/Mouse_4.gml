@@ -14,7 +14,7 @@ global.sprite_run = s_acher_run;
 global.sprite_takehit = s_acher_takehit;
 
 //default skill
-global.alarm_fireshoot = 80;
+global.alarm_fireshoot = 120;
 global.fireshoot_lvl = 1;
 global.alarm_slash = -1;
 global.alarm_lightbolt = -1;

@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "item_collect.mp3",
   "type": 0,
-  "volume": 0.54,
+  "volume": 0.3,
 }

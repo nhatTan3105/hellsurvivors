@@ -39,7 +39,7 @@ if(instance_exists(obj_UpLevel0)){
 						global.sound_lv3 = true;
 					}
 					instance_create_layer(XX, YY, "Instances_1", obj_Enemy_Mushroom);
-				}else if(global.boss3_created == false && global.enemy_limit > 82 && global.boss3_exist == false){
+				}else if(global.boss3_created == false && global.enemy_limit > 60 && global.boss3_exist == false){
 					if(!instance_exists(obj_Boss3_Death)){
 						audio_play_sound(bossspawn, 11, false);
 						instance_create_layer(XXX, YYY, "Instances_1", obj_Boss3_Death);
