@@ -1,3 +1,3 @@
 # hellsurvivors
-#update
-#file nay cua nhattan
+# roguelike game
+# Develope by NhatTan
